@@ -1,0 +1,56 @@
+// Tabs
+
+$tab-border-color: #cdd2d6;
+$tab-text-color: #697580;
+$tab-active-background-color: #46752c;
+$tab-active-border-color: #46752c;
+
+#nav {
+  background-color: $white;
+  display: block;
+  width: 100%;
+}
+
+#tabs {
+
+  margin: 0 auto;
+  max-width: 340px;
+  min-width: 300px;
+  padding: 5px 0 3px 0;
+
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+  }
+
+  a {
+    border: solid 1px $tab-border-color;
+    border-radius: 5px;
+    color: $tab-text-color;
+    display: block;
+    font-size: 13px;
+    margin: 0 5px 0 0;
+    padding: 8px 0 2px 0;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .here a {
+    background-color: $tab-active-background-color;
+    border-color: $tab-active-border-color;
+    color: $white;
+  }
+
+  .icon:before {
+    display: block;
+    font-size: 125%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+}

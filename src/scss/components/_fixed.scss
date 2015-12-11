@@ -1,0 +1,31 @@
+// Sticky and fixed
+
+#header {
+  margin: 0 auto;
+  max-width: 500px;
+  min-width: 280px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#app {
+  background-color: $white;
+  margin-top: 91px;
+}
+
+.head,
+.subhead {
+  position: sticky;
+  top: 91px;
+}
+
+.search-focus #header {
+  position: absolute;
+}
+
+.search-focus .head,
+.search-focus .text-head,
+.search-focus .subhead {
+  position: static;
+}

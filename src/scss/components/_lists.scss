@@ -1,0 +1,115 @@
+// Lists
+
+$list-link-color: #40474f;
+$list-text-color: #697580;
+$list-text-minor-color: #666;
+$list-head-border-color: #3f474f;
+$list-head-text-color: #3f474f;
+$list-icon-text-color: #40474f;
+$list-filter-background-color: #3f474f;
+$list-filter-border-color: #8a8a8a;
+$list-subhead-background-color: #467f2e;
+$list-subhead-border-color: #265f0e;
+
+.list {
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    border-bottom: solid 1px $off-white;
+    color: $list-link-color;
+    display: block;
+    margin: 0 12px;
+    padding: 0.8em 0;
+    text-decoration: none;
+    z-index: 250;
+  }
+
+  b {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-right: 4%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  span {
+    color: $list-text-color;
+    display: block;
+    font-style: normal;
+    margin: 0.2em 4% 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .options {
+    color: $list-text-minor-color;
+    padding-right: 4em;
+  }
+
+  .icon:before {
+    color: $list-icon-text-color;
+  }
+
+}
+
+.head,
+.menu-head,
+.filter-head,
+.text-head {
+  background-color: $white;
+  border-bottom: solid 1px $list-head-border-color;
+  color: $list-head-text-color;
+  font-weight: bold;
+  padding: 0.5em 12px 0.25em 0.75em;
+}
+
+.head,
+.text-head,
+.filter-head,
+.subhead {
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subhead,
+.filter-subhead,
+.group-subhead {
+  background-color: $list-filter-background-color;
+  border-bottom: solid 1px $list-filter-border-color;
+  color: $white;
+  font-size: 0.9em;
+  padding: 0.4em 0.75em 0.2em 0.85em;
+}
+
+.subhead {
+  background-color: $list-subhead-background-color;
+  border-color: $list-subhead-border-color;
+}
+
+.collapsed {
+
+  li {
+    display: none;
+  }
+
+  .head,
+  .filter-head {
+    display: list-item;
+  }
+
+  .subhead {
+    display: block;
+    position: static;
+  }
+
+}

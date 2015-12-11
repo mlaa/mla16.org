@@ -1,0 +1,19 @@
+// Last updated date
+
+#notice {
+
+  display: none;
+
+  p {
+    color: $text-color-minor;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    padding: 10px 12px 8px 12px;
+  }
+
+}
+
+.info.menu #notice {
+  display: block;
+}

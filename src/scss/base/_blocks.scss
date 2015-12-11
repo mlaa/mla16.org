@@ -1,0 +1,18 @@
+// Blocks
+
+html {
+  background-color: $off-white;
+}
+
+body {
+  background-color: $white;
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  font-weight: $default-font-weight;
+  line-height: 1.4em;
+  margin: 0;
+  max-width: 500px;
+  min-width: 280px;
+  padding: 0;
+  z-index: 100;
+}

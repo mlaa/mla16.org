@@ -1,0 +1,29 @@
+// Filters
+
+$filter-button-background-color: #467f2e;
+
+.filters {
+
+  padding-bottom: 0.1em;
+
+  .active {
+    font-weight: 600;
+  }
+
+  .button {
+    background-color: $filter-button-background-color;
+    color: $white;
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    margin: 0;
+    padding: 0.75em;
+    text-align: center;
+    text-decoration: none;
+  }
+
+}
+
+.filter-head {
+  padding-left: 0.6em;
+}

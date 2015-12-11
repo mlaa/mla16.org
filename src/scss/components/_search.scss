@@ -1,0 +1,42 @@
+// Search
+
+$search-icon-text-color: #cdd2d6;
+$search-terms-border-color: #cdd2d6;
+
+fieldset {
+  margin: 0 8px 0 5px;
+  position: relative;
+}
+
+#search {
+  display: none;
+}
+
+.home #search {
+  display: block;
+}
+
+.icon-search {
+  color: $search-icon-text-color;
+  font-size: 0.9em;
+  left: 8px;
+  position: absolute;
+  top: 6px;
+}
+
+#terms {
+  appearance: none;
+  background-color: $white;
+  border: solid 1px $search-terms-border-color;
+  border-radius: 8px;
+  font-size: 13px;
+  height: 20px;
+  margin-top: 2px;
+  padding: 3px 0;
+  text-indent: 27px;
+  width: 100%;
+}
+
+#terms::placeholder {
+  text-indent: 27px;
+}

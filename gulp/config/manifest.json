@@ -1,0 +1,11 @@
+{
+  baseDir: 'public',
+  options: {
+    hash: true,
+    timestamp: false,
+    preferOnline: true,
+    network: ['*'],
+    filename: 'public/app.manifest',
+    exclude: 'app.manifest'
+  }
+}

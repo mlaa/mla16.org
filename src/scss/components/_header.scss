@@ -1,0 +1,23 @@
+// Header
+
+#header {
+  z-index: 200;
+}
+
+#masthead {
+
+  background-color: $white;
+
+  h1 {
+    background-image: url('/img/ui/header.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 500px 36px;
+    cursor: pointer;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+}
