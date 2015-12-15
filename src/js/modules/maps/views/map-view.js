@@ -5,18 +5,16 @@
 module.exports = function (Module, App, Backbone) {
 
   var $ = Backbone.$;
-  var mapTemplate = require('../templates/map.tpl');
 
   Module.Views = Module.Views || {};
 
-  Module.Views.Info = Backbone.Marionette.ItemView.extend({
+  Module.Views.MapView = Backbone.Marionette.ItemView.extend({
 
-    tagName: 'div',
     className: 'map',
-    template: mapTemplate,
+    template: require('../templates/map.tpl'),
 
-    events: {
-      'click .text-head': 'loadParentMenu'
+    initialize: function () {
+      App.vent.trigger('ui:setPageTitle', this.model.get('title'));
     },
 
     onShow: function () {
@@ -28,10 +26,6 @@ module.exports = function (Module, App, Backbone) {
 
     onBeforeDestroy: function () {
       $('.panzoom').panzoom('destroy');
-    },
-
-    loadParentMenu: function() {
-      App.vent.trigger('menu:showParent', 'maps');
     }
 
   });

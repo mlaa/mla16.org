@@ -10,6 +10,7 @@ module.exports = {
     'js-lint',
     'browserify',
     'scss-lint',
-    'sass'
+    'sass',
+    'manifest'
   ]
 };

@@ -1,29 +1,33 @@
 // Filters
 
-$filter-button-background-color: #467f2e;
-
 .filters {
 
   padding-bottom: 0.1em;
+
+  .filter,
+  .active {
+    border-top: solid 1px $text-border-color;
+    color: $text-color;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    margin: 0;
+    padding: 12px 10px;
+    -webkit-tap-highlight-color: $filter-tap-background-color;
+    text-decoration: none;
+    text-size-adjust: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+    z-index: 250;
+  }
 
   .active {
     font-weight: 600;
   }
 
-  .button {
-    background-color: $filter-button-background-color;
-    color: $white;
-    cursor: pointer;
-    display: block;
-    font-weight: 600;
-    margin: 0;
-    padding: 0.75em;
-    text-align: center;
-    text-decoration: none;
-  }
-
 }
 
-.filter-head {
-  padding-left: 0.6em;
+.menu-head + .filter,
+.menu-head + .active {
+  border-top: 0;
 }

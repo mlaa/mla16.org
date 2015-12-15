@@ -517,6 +517,14 @@
    </person>
    <person id="120391" sort="A">
       <first>Palmar Maria</first>
+      <last>Alvarez-Blanco</last>
+      <sessions>
+         <count>1</count>
+         <session>166</session>
+      </sessions>
+   </person>
+   <person id="120391" sort="A">
+      <first>Palmar Maria</first>
       <last>Álvarez-Blanco</last>
       <sessions>
          <count>1</count>
@@ -1101,15 +1109,6 @@
       <sessions>
          <count>1</count>
          <session>208</session>
-      </sessions>
-   </person>
-   <person id="49636" sort="B">
-      <first>Cristina</first>
-      <last>Bacchilega</last>
-      <sessions>
-         <count>2</count>
-         <session>186</session>
-         <session>324</session>
       </sessions>
    </person>
    <person id="187175" sort="B">
@@ -2029,6 +2028,14 @@
          <session>704</session>
       </sessions>
    </person>
+   <person id="178090" sort="B">
+      <first>Roya</first>
+      <last>Biggie</last>
+      <sessions>
+         <count>1</count>
+         <session>720</session>
+      </sessions>
+   </person>
    <person id="151576" sort="B">
       <first>Hélène</first>
       <last>Bilis</last>
@@ -2497,14 +2504,6 @@
       <sessions>
          <count>1</count>
          <session>37</session>
-      </sessions>
-   </person>
-   <person id="83768" sort="B">
-      <first>Marc</first>
-      <last>Bousquet</last>
-      <sessions>
-         <count>1</count>
-         <session>832</session>
       </sessions>
    </person>
    <person id="146486" sort="B">
@@ -4028,14 +4027,6 @@
          <session>620</session>
       </sessions>
    </person>
-   <person id="146905" sort="C">
-      <first>Myriam J. A.</first>
-      <last>Chancy</last>
-      <sessions>
-         <count>1</count>
-         <session>140</session>
-      </sessions>
-   </person>
    <person id="129932" sort="C">
       <first>Manu</first>
       <last>Chander</last>
@@ -4423,6 +4414,14 @@
          <session>180</session>
       </sessions>
    </person>
+   <person id="20097359" sort="C">
+      <first>Antonio</first>
+      <last>Cicero</last>
+      <sessions>
+         <count>1</count>
+         <session/>
+      </sessions>
+   </person>
    <person id="140931" sort="C">
       <first>Nicholas</first>
       <last>Cifuentes-Goodbody</last>
@@ -4589,7 +4588,8 @@
       <first>Amy</first>
       <last>Clukey</last>
       <sessions>
-         <count>1</count>
+         <count>2</count>
+         <session>292</session>
          <session>496</session>
       </sessions>
    </person>
@@ -4803,14 +4803,6 @@
       <sessions>
          <count>1</count>
          <session>140</session>
-      </sessions>
-   </person>
-   <person id="187533" sort="C">
-      <first>Michael</first>
-      <last>Collins</last>
-      <sessions>
-         <count>1</count>
-         <session>819</session>
       </sessions>
    </person>
    <person id="169873" sort="C">
@@ -5190,14 +5182,6 @@
          <session>483</session>
       </sessions>
    </person>
-   <person id="138237" sort="C">
-      <first>Joanie</first>
-      <last>Crandall</last>
-      <sessions>
-         <count>1</count>
-         <session>416</session>
-      </sessions>
-   </person>
    <person id="126083" sort="C">
       <first>Cori</first>
       <last>Crane</last>
@@ -5351,14 +5335,6 @@
       <sessions>
          <count>1</count>
          <session>242</session>
-      </sessions>
-   </person>
-   <person id="65869" sort="C">
-      <first>June S.</first>
-      <last>Cummins</last>
-      <sessions>
-         <count>1</count>
-         <session>137</session>
       </sessions>
    </person>
    <person id="77071" sort="C">
@@ -6147,14 +6123,6 @@
          <session>506</session>
       </sessions>
    </person>
-   <person id="187361" sort="D">
-      <first>Thomas</first>
-      <last>Docherty</last>
-      <sessions>
-         <count>1</count>
-         <session>547</session>
-      </sessions>
-   </person>
    <person id="116091" sort="D">
       <first>Lara A.</first>
       <last>Dodds</last>
@@ -6558,8 +6526,9 @@
       <first>Robert</first>
       <last>Eaglestone</last>
       <sessions>
-         <count>1</count>
+         <count>2</count>
          <session>547</session>
+         <session>819</session>
       </sessions>
    </person>
    <person id="151352" sort="E">
@@ -6688,7 +6657,8 @@
       <first>Caroline</first>
       <last>Edwards</last>
       <sessions>
-         <count>1</count>
+         <count>2</count>
+         <session>547</session>
          <session>819</session>
       </sessions>
    </person>
@@ -8091,6 +8061,14 @@
          <session>692</session>
       </sessions>
    </person>
+   <person id="189438" sort="F">
+      <first>Adria</first>
+      <last>Frizzi</last>
+      <sessions>
+         <count>1</count>
+         <session>260</session>
+      </sessions>
+   </person>
    <person id="121483" sort="F">
       <first>Daniel</first>
       <last>Frost</last>
@@ -8925,8 +8903,9 @@
       <first>David Theo</first>
       <last>Goldberg</last>
       <sessions>
-         <count>3</count>
+         <count>4</count>
          <session>306</session>
+         <session>592</session>
          <session>634</session>
          <session>689</session>
       </sessions>
@@ -10012,14 +9991,6 @@
          <session>466</session>
       </sessions>
    </person>
-   <person id="9772" sort="H">
-      <first>Donna B.</first>
-      <last>Hamilton</last>
-      <sessions>
-         <count>1</count>
-         <session>472</session>
-      </sessions>
-   </person>
    <person id="103724" sort="H">
       <first>Michelle M.</first>
       <last>Hamilton</last>
@@ -10898,6 +10869,14 @@
          <session>410</session>
       </sessions>
    </person>
+   <person id="141775" sort="H">
+      <first>Mica</first>
+      <last>Hilson</last>
+      <sessions>
+         <count>1</count>
+         <session>399</session>
+      </sessions>
+   </person>
    <person id="150364" sort="H">
       <first>Ken</first>
       <last>Hiltner</last>
@@ -11103,14 +11082,6 @@
          <count>2</count>
          <session>185</session>
          <session>648</session>
-      </sessions>
-   </person>
-   <person id="83165" sort="H">
-      <first>Sharon Patricia</first>
-      <last>Holland</last>
-      <sessions>
-         <count>1</count>
-         <session>292</session>
       </sessions>
    </person>
    <person id="187651" sort="H">
@@ -11644,14 +11615,6 @@
          <session>309</session>
       </sessions>
    </person>
-   <person id="116973" sort="I">
-      <first>Nicola M.</first>
-      <last>Imbracsio</last>
-      <sessions>
-         <count>1</count>
-         <session>720</session>
-      </sessions>
-   </person>
    <person id="149326" sort="I">
       <first>Zachary</first>
       <last>Ingle</last>
@@ -11833,14 +11796,6 @@
          <session>759</session>
       </sessions>
    </person>
-   <person id="168565" sort="J">
-      <first>Lise</first>
-      <last>Jaillant</last>
-      <sessions>
-         <count>1</count>
-         <session>578</session>
-      </sessions>
-   </person>
    <person id="168308" sort="J">
       <first>Karen</first>
       <last>Jaime</last>
@@ -11945,14 +11900,6 @@
          <count>2</count>
          <session>493</session>
          <session>728</session>
-      </sessions>
-   </person>
-   <person id="154645" sort="J">
-      <first>Régine</first>
-      <last>Jean-Charles</last>
-      <sessions>
-         <count>1</count>
-         <session>140</session>
       </sessions>
    </person>
    <person id="183030" sort="J">
@@ -12268,14 +12215,6 @@
       <sessions>
          <count>1</count>
          <session>328</session>
-      </sessions>
-   </person>
-   <person id="175176" sort="J">
-      <first>Diana</first>
-      <last>Jorza</last>
-      <sessions>
-         <count>1</count>
-         <session>104</session>
       </sessions>
    </person>
    <person id="156659" sort="J">
@@ -13724,7 +13663,7 @@
          <session>113</session>
       </sessions>
    </person>
-   <person id="20094278" sort="L">
+   <person id="111408" sort="L">
       <first>Joy</first>
       <last>Ladin</last>
       <sessions>
@@ -13975,7 +13914,8 @@
       <first>Kimberly J.</first>
       <last>Lau</last>
       <sessions>
-         <count>1</count>
+         <count>2</count>
+         <session>186</session>
          <session>324</session>
       </sessions>
    </person>
@@ -14061,14 +14001,6 @@
          <session>501</session>
       </sessions>
    </person>
-   <person id="187632" sort="L">
-      <first>Pablo</first>
-      <last>La Parra-Pérez</last>
-      <sessions>
-         <count>1</count>
-         <session>166</session>
-      </sessions>
-   </person>
    <person id="152435" sort="L">
       <first>Cameron</first>
       <last>Leader-Picone</last>
@@ -14132,14 +14064,6 @@
       <sessions>
          <count>1</count>
          <session>723</session>
-      </sessions>
-   </person>
-   <person id="128010" sort="L">
-      <first>Linda</first>
-      <last>Ledford-Miller</last>
-      <sessions>
-         <count>1</count>
-         <session>260</session>
       </sessions>
    </person>
    <person id="181157" sort="L">
@@ -15057,14 +14981,6 @@
          <session>192</session>
       </sessions>
    </person>
-   <person id="107472" sort="L">
-      <first>Roger W.</first>
-      <last>Lundin</last>
-      <sessions>
-         <count>1</count>
-         <session>197</session>
-      </sessions>
-   </person>
    <person id="20093455" sort="L">
       <first>Eric</first>
       <last>Lupfer</last>
@@ -15427,14 +15343,6 @@
          <count>2</count>
          <session>596</session>
          <session>796</session>
-      </sessions>
-   </person>
-   <person id="27158" sort="M">
-      <first>Steven</first>
-      <last>Mailloux</last>
-      <sessions>
-         <count>1</count>
-         <session>185</session>
       </sessions>
    </person>
    <person id="120323" sort="M">
@@ -18893,6 +18801,14 @@
          <session>399</session>
       </sessions>
    </person>
+   <person id="189149" sort="P">
+      <first>Yolanda</first>
+      <last>Palmer-Clarke</last>
+      <sessions>
+         <count>1</count>
+         <session>416</session>
+      </sessions>
+   </person>
    <person id="46752" sort="P">
       <first>Frank A.</first>
       <last>Palmeri</last>
@@ -19126,8 +19042,9 @@
       <first>Donna L.</first>
       <last>Pasternak</last>
       <sessions>
-         <count>1</count>
+         <count>2</count>
          <session>335</session>
+         <session>472</session>
       </sessions>
    </person>
    <person id="132803" sort="P">
@@ -19838,14 +19755,6 @@
          <session>1</session>
          <session>386</session>
          <session>540</session>
-      </sessions>
-   </person>
-   <person id="20091003" sort="P">
-      <first>Holiday</first>
-      <last>Powers</last>
-      <sessions>
-         <count>1</count>
-         <session>208</session>
       </sessions>
    </person>
    <person id="116359" sort="P">
@@ -21107,6 +21016,14 @@
          <session>231</session>
       </sessions>
    </person>
+   <person id="119902" sort="R">
+      <first>Sonia M.</first>
+      <last>Roncador</last>
+      <sessions>
+         <count>1</count>
+         <session/>
+      </sessions>
+   </person>
    <person id="55237" sort="R">
       <first>Judith A.</first>
       <last>Roof</last>
@@ -21268,14 +21185,6 @@
       <sessions>
          <count>1</count>
          <session>562</session>
-      </sessions>
-   </person>
-   <person id="68544" sort="R">
-      <first>Katherine A.</first>
-      <last>Rowe</last>
-      <sessions>
-         <count>1</count>
-         <session>592</session>
       </sessions>
    </person>
    <person id="182322" sort="R">
@@ -21621,14 +21530,6 @@
       <sessions>
          <count>1</count>
          <session>716</session>
-      </sessions>
-   </person>
-   <person id="187538" sort="S">
-      <first>Richard</first>
-      <last>Salmon</last>
-      <sessions>
-         <count>1</count>
-         <session>383</session>
       </sessions>
    </person>
    <person id="144441" sort="S">
@@ -23242,6 +23143,14 @@
          <session>154</session>
       </sessions>
    </person>
+   <person id="96995" sort="S">
+      <first>Erin Ann</first>
+      <last>Smith</last>
+      <sessions>
+         <count>1</count>
+         <session>578</session>
+      </sessions>
+   </person>
    <person id="146650" sort="S">
       <first>John H.</first>
       <last>Smith</last>
@@ -23887,7 +23796,7 @@
          <session>562</session>
       </sessions>
    </person>
-   <person id="20091647" sort="S">
+   <person id="133924" sort="S">
       <first>Andrea</first>
       <last>Stevens</last>
       <sessions>
@@ -23927,14 +23836,6 @@
       <sessions>
          <count>1</count>
          <session>495</session>
-      </sessions>
-   </person>
-   <person id="23108" sort="S">
-      <first>Catharine Roslyn</first>
-      <last>Stimpson</last>
-      <sessions>
-         <count>1</count>
-         <session>66</session>
       </sessions>
    </person>
    <person id="128014" sort="S">
@@ -24203,14 +24104,6 @@
       <sessions>
          <count>1</count>
          <session>251</session>
-      </sessions>
-   </person>
-   <person id="20090951" sort="S">
-      <first>Roger</first>
-      <last>Sutton</last>
-      <sessions>
-         <count>1</count>
-         <session>297</session>
       </sessions>
    </person>
    <person id="31342" sort="S">
@@ -24531,6 +24424,14 @@
       <sessions>
          <count>1</count>
          <session>205</session>
+      </sessions>
+   </person>
+   <person id="20097418" sort="T">
+      <first>Don</first>
+      <last>Tate</last>
+      <sessions>
+         <count>1</count>
+         <session>297</session>
       </sessions>
    </person>
    <person id="37146" sort="T">
@@ -25766,14 +25667,6 @@
          <session>418</session>
       </sessions>
    </person>
-   <person id="34099" sort="W">
-      <first>Mara R.</first>
-      <last>Wade</last>
-      <sessions>
-         <count>1</count>
-         <session>768</session>
-      </sessions>
-   </person>
    <person id="176667" sort="W">
       <first>Jessica</first>
       <last>Waggoner</last>
@@ -26911,14 +26804,6 @@
       <sessions>
          <count>1</count>
          <session>531</session>
-      </sessions>
-   </person>
-   <person id="172116" sort="W">
-      <first>Alexander</first>
-      <last>Wolfe</last>
-      <sessions>
-         <count>1</count>
-         <session>116</session>
       </sessions>
    </person>
    <person id="111724" sort="W">

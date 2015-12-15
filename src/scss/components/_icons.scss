@@ -8,11 +8,9 @@
 }
 
 .icon:before,
-.filter-head:before,
 .subhead:before,
-.active:after,
-.head:after,
-.text-head:after {
+.active:after {
+  color: $icon-text-color;
   display: inline-block;
   font-family: fontello;
   font-style: normal;
@@ -28,9 +26,7 @@
 }
 
 .icon:after,
-.active:after,
-.head:after,
-.text-head:after {
+.active:after {
   float: right;
   line-height: 1.3em;
   margin-right: 0;
@@ -113,12 +109,9 @@
 .icon-map:before { content: '\e84a'; } // ''
 .icon-users-1:before { content: '\e84b'; } // ''
 
-// Heads
-.filter-head:before { content: '\e83f'; }
-.subhead:before { content: '\e812'; }
+// Collapsable heads
+.program .subhead:before { content: '\e812'; }
 .collapsed .subhead:before { content: '\e811'; }
-.head:after,
-.text-head:after { content: '\e80a'; }
 
 // Filters
-.active:after { content: '\e80d'; }
+.filters .active:after { content: '\e80d'; }

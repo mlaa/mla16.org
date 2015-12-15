@@ -2,17 +2,13 @@
 
 'use strict';
 
-module.exports = function (Module, App, Backbone) {
+module.exports = function (Module) {
 
-  var _ = Backbone._;
+  Module.Data = Module.Data || {};
 
-  var filters = [
+  Module.Data.filters = [
     {
-      style: 'filter-head',
-      title: 'Filters'
-    },
-    {
-      style: 'filter-subhead',
+      style: 'menu-head',
       title: 'Day'
     },
     {
@@ -36,7 +32,7 @@ module.exports = function (Module, App, Backbone) {
       title: 'Sunday, 11 January'
     },
     {
-      style: 'filter-subhead',
+      style: 'menu-head',
       title: 'Time'
     },
     {
@@ -60,18 +56,18 @@ module.exports = function (Module, App, Backbone) {
       title: 'Late-Night'
     },
     {
-      style: 'filter-subhead',
+      style: 'menu-head',
       title: 'Location'
     },
     {
       type: 'venue',
-      href: 've',
-      title: 'VCC East'
+      href: 'acc',
+      title: 'Austin Convention Center'
     },
     {
       type: 'venue',
-      href: 'vw',
-      title: 'VCC West'
+      href: 'jwm',
+      title: 'JW Marriott'
     },
     {
       type: 'venue',
@@ -79,13 +75,13 @@ module.exports = function (Module, App, Backbone) {
       title: 'Exhibit Hall Theater'
     },
     {
-      type: 'venue',
-      href: 'off',
-      title: 'Elsewhere'
+      style: 'menu-head',
+      title: 'Session Type'
     },
     {
-      style: 'filter-subhead',
-      title: 'Session Type'
+      type: 'type',
+      href: 'aca',
+      title: 'Connected Academics'
     },
     {
       type: 'type',
@@ -99,16 +95,17 @@ module.exports = function (Module, App, Backbone) {
     },
     {
       type: 'type',
-      href: 'pre',
-      title: 'Presidential Theme'
+      href: 'spe',
+      title: 'Special Event'
     },
     {
-      style: 'button',
-      title: 'Apply'
+      type: 'type',
+      href: 'pre',
+      title: 'Presidential Theme'
     }
   ];
 
-  var categories = {
+  Module.Data.categories = {
     'th':  'Thursday',
     'fr':  'Friday',
     'sa':  'Saturday',
@@ -117,41 +114,15 @@ module.exports = function (Module, App, Backbone) {
     'aft': 'Afternoon',
     'eve': 'Evening',
     'ln':  'Late-Night',
-    'sh':  'Sheraton',
-    'ma':  'Marriott',
-    'fa':  'Fairmont',
+    'acc': 'ACC',
+    'jwm': 'JW Marriott',
     'eh':  'Exhibit Hall Theater',
     'off': 'Elsewhere',
+    'aca': 'Connected Academics',
     'pub': 'Open to the Public',
     'soc': 'Social Event',
+    'spe': 'Special Event',
     'pre': 'Presidential Theme'
-  };
-
-  // Get description of the current filters.
-  Module.GetFilterDescription = function (currentFilters) {
-
-    var filterDescription = 'Filters';
-
-    if (currentFilters.length) {
-      filterDescription += ': ' + _.map(currentFilters, function (filter) {
-        return categories[filter];
-      }).join(', ');
-    }
-
-    return filterDescription;
-
-  };
-
-  // Loop through data and "activate" selected filters
-  Module.GetActiveFilters = function (selectedFilters) {
-    return _.map(filters, function (filter) {
-      if (selectedFilters.indexOf(filter.href) !== -1) {
-        filter.active = 'active';
-      } else {
-        filter.active = '';
-      }
-      return filter;
-    });
   };
 
 };

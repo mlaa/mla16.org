@@ -1,3 +1,4 @@
-node_modules
-public/build
-xml/archive
+/node_modules/
+/public/build/
+/server/cache/
+/xml/archive/

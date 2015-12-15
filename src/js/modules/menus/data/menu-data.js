@@ -8,137 +8,61 @@ module.exports = function (Module) {
 
   // Section-level menus
   Module.Data.Menu = {
-    program: [
+    main: [
+      {
+        id: 'saved',
+        title: 'Saved sessions',
+        icon: 'star'
+      },
       {
         id: 'program/th',
-        title: 'Thursday, 8 January',
-        childClass: 'icon-calendar-empty'
+        title: 'Thursday, 7 January',
+        icon: 'calendar-empty'
       },
       {
         id: 'program/fr',
-        title: 'Friday, 9 January',
-        childClass: 'icon-calendar-empty'
+        title: 'Friday, 8 January',
+        icon: 'calendar-empty'
       },
       {
         id: 'program/sa',
-        title: 'Saturday, 10 January',
-        childClass: 'icon-calendar-empty'
+        title: 'Saturday, 9 January',
+        icon: 'calendar-empty'
       },
       {
         id: 'program/su',
-        title: 'Sunday, 11 January',
-        childClass: 'icon-calendar-empty'
+        title: 'Sunday, 10 January',
+        icon: 'calendar-empty'
       },
       {
         id: 'filter',
         title: 'Filter by category',
-        childClass: 'icon-filter'
-      }
-    ],
-    people: [
-      {
-        id: 'people/A',
-        title: 'A'
+        icon: 'filter'
       },
       {
-        id: 'people/B',
-        title: 'B'
+        id: 'maps/home',
+        title: 'Maps',
+        icon: 'map'
       },
       {
-        id: 'people/C',
-        title: 'C'
+        id: 'info/home',
+        title: 'Information',
+        icon: 'info-circled'
       },
       {
-        id: 'people/D',
-        title: 'D'
+        id: 'program/eh',
+        title: 'Exhibit Hall Theater',
+        icon: 'youtube-play'
       },
       {
-        id: 'people/E',
-        title: 'E'
+        title: '#mla16',
+        href: 'https://twitter.com/hashtag/mla16',
+        icon: 'twitter'
       },
       {
-        id: 'people/F',
-        title: 'F'
-      },
-      {
-        id: 'people/G',
-        title: 'G'
-      },
-      {
-        id: 'people/H',
-        title: 'H'
-      },
-      {
-        id: 'people/I',
-        title: 'I'
-      },
-      {
-        id: 'people/J',
-        title: 'J'
-      },
-      {
-        id: 'people/K',
-        title: 'K'
-      },
-      {
-        id: 'people/L',
-        title: 'L'
-      },
-      {
-        id: 'people/M',
-        title: 'M'
-      },
-      {
-        id: 'people/N',
-        title: 'N'
-      },
-      {
-        id: 'people/O',
-        title: 'O'
-      },
-      {
-        id: 'people/P',
-        title: 'P'
-      },
-      {
-        id: 'people/Q',
-        title: 'Q'
-      },
-      {
-        id: 'people/R',
-        title: 'R'
-      },
-      {
-        id: 'people/S',
-        title: 'S'
-      },
-      {
-        id: 'people/T',
-        title: 'T'
-      },
-      {
-        id: 'people/U',
-        title: 'U'
-      },
-      {
-        id: 'people/V',
-        title: 'V'
-      },
-      {
-        id: 'people/W',
-        title: 'W'
-      },
-      {
-        id: 'people/X',
-        title: 'X'
-      },
-      {
-        id: 'people/Y',
-        title: 'Y'
-      },
-      {
-        id: 'people/Z',
-        title: 'Z'
+        title: 'Browse the Program at mla.org',
+        href: 'https://apps.mla.org/program',
+        icon: 'link-ext'
       }
     ],
     maps: [
@@ -148,52 +72,65 @@ module.exports = function (Module) {
       },
       {
         title: 'MLA Convention Google Map',
-        href: 'https://www.google.com/maps/d/viewer?mid=zxKWBfmu02v4.kXVK9xfJ3Qhk'
+        href: 'https://www.google.com/maps/d/edit?mid=zuHDtMA_j6o0.kKf08kLc2RtE',
+        icon: 'link-ext'
       },
       {
         type: 'menu-head',
-        title: 'Vancouver Convention Centre East'
+        title: 'Austin Convention Center (ACC)'
       },
       {
-        id: 'maps/vcc-east-convention',
-        title: 'Convention Level'
-      },
-      {
-        id: 'maps/vcc-east-meeting',
-        title: 'Meeting Level'
-      },
-      {
-        type: 'menu-head',
-        title: 'Vancouver Convention Centre West'
-      },
-      {
-        id: 'maps/vcc-west-1',
+        id: 'maps/acc-level-1',
         title: 'Level 1'
       },
       {
-        id: 'maps/vcc-exhibit-area',
-        title: 'Exhibit Area, Level 1'
-      },
-      {
-        id: 'maps/vcc-west-2',
-        title: 'Level 2'
-      },
-      {
-        id: 'maps/vcc-west-3',
+        id: 'maps/acc-level-3',
         title: 'Level 3'
       },
       {
-        type: 'menu-head',
-        title: 'Fairmont Waterfront'
+        id: 'maps/acc-level-4',
+        title: 'Level 4'
       },
       {
-        id: 'maps/fairmont-waterfront',
-        title: 'Lobby Level'
+        id: 'maps/acc-exhibit-area',
+        title: 'Exhibit Area, Ballroom D–G, level 4'
+      },
+      {
+        type: 'menu-head',
+        title: 'JW Marriott Austin'
+      },
+      {
+        id: 'maps/marriott-level-2',
+        title: 'Level 2'
+      },
+      {
+        id: 'maps/marriott-level-3',
+        title: 'Level 3'
+      },
+      {
+        id: 'maps/marriott-level-4',
+        title: 'Level 4'
+      },
+      {
+        id: 'maps/marriott-level-5',
+        title: 'Level 5'
+      },
+      {
+        type: 'menu-head',
+        title: 'Hilton Austin'
+      },
+      {
+        id: 'maps/hilton-4th-floor',
+        title: 'Fourth Floor'
+      },
+      {
+        id: 'maps/hilton-lobby',
+        title: 'Lobby'
       }
     ],
     info: [
       {
-        type: 'menu-head',
+        type: 'subhead',
         title: 'General Information'
       },
       {
@@ -210,14 +147,19 @@ module.exports = function (Module) {
       },
       {
         id: 'info/wifi',
-        title: 'Wi-Fi Access'
+        title: 'Wi-Fi Access',
+        icon: 'wifi'
+      },
+      {
+        id: 'info/hotel-wifi',
+        title: 'Wi-Fi Access by Hotel Guests'
       },
       {
         id: 'info/weather',
         title: 'What to Do in a Weather or Other Emergency'
       },
       {
-        type: 'menu-head',
+        type: 'subhead',
         title: 'Policies'
       },
       {
@@ -245,7 +187,7 @@ module.exports = function (Module) {
         title: 'Guest Passes to the Exhibit Hall'
       },
       {
-        id: 'info/id',
+        id: 'info/identification',
         title: 'Identification'
       },
       {
@@ -257,12 +199,12 @@ module.exports = function (Module) {
         title: 'Smoking'
       },
       {
-        type: 'menu-head',
-        title: 'MLA Registration and Welcome Center'
+        type: 'subhead',
+        title: 'MLA Registration and Welcome Centers'
       },
       {
         id: 'info/registration',
-        title: 'About the MLA Registration and Welcome Center'
+        title: 'About the MLA Registration and Welcome Centers'
       },
       {
         id: 'info/disabilities',
@@ -274,14 +216,18 @@ module.exports = function (Module) {
       },
       {
         id: 'info/membership',
-        title: 'Membership Desk'
+        title: 'Membership Desks'
       },
       {
-        id: 'info/austin',
-        title: 'Austin Information'
+        id: 'info/print-program',
+        title: 'Print Copies of the Program'
       },
       {
-        type: 'menu-head',
+        id: 'info/philadelphia',
+        title: 'Philadelphia Information'
+      },
+      {
+        type: 'subhead',
         title: 'MLA PubCentral'
       },
       {
@@ -289,7 +235,7 @@ module.exports = function (Module) {
         title: 'About MLA PubCentral'
       },
       {
-        type: 'menu-head',
+        type: 'subhead',
         title: 'On-Site Resources'
       },
       {
@@ -297,8 +243,8 @@ module.exports = function (Module) {
         title: 'Business Center'
       },
       {
-        id: 'info/child-care',
-        title: 'Child Care'
+        id: 'info/childcare',
+        title: 'Childcare'
       },
       {
         id: 'info/bill-w',
@@ -307,10 +253,6 @@ module.exports = function (Module) {
       {
         id: 'info/headquarters',
         title: 'Headquarters Office'
-      },
-      {
-        id: 'info/internet-in-hotels',
-        title: 'Internet Access by Hotel Guests'
       },
       {
         id: 'info/lost-and-found',
@@ -329,23 +271,23 @@ module.exports = function (Module) {
         title: 'Shuttle Service'
       },
       {
-        id: 'info/ready-room',
-        title: 'Speaker Ready Room'
+        id: 'info/ready-rooms',
+        title: 'Speaker Ready Rooms'
       },
       {
         id: 'info/transportation',
-        title: 'Transportation in Vancouver'
+        title: 'Transportation in Austin'
       },
       {
-        id: 'info/vancouver-information',
-        title: 'Vancouver Information and Restaurant Reservations'
+        id: 'info/austin-info',
+        title: 'Austin Information and Restaurant Reservations'
       },
       {
         id: 'info/whos-here',
         title: '“Who’s Here” Directory'
       },
       {
-        type: 'menu-head',
+        type: 'subhead',
         title: 'Job Information Center'
       },
       {
@@ -353,7 +295,7 @@ module.exports = function (Module) {
         title: 'Job Information Center'
       },
       {
-        type: 'menu-head',
+        type: 'subhead',
         title: 'Exhibits'
       },
       {
@@ -365,59 +307,59 @@ module.exports = function (Module) {
         title: 'Exhibit Hall Theater'
       },
       {
-        id: 'info/pubcentral',
-        title: 'MLA Exhibit Booth'
-      },
-      {
-        type: 'menu-head',
+        type: 'subhead',
         title: 'Event Highlights'
       },
       {
         id: 'info/creative-conversations',
-        title: 'Creative Conversations'
+        title: 'Creative Conversations and Readings'
       },
       {
         id: 'info/excursions',
         title: 'Cultural Excursions'
       },
       {
-        id: '641',
-        title: 'MLA Awards Ceremony (Session 641)'
+        id: '692',
+        title: 'MLA Awards Ceremony (Session 692)'
       },
       {
-        id: '406',
-        title: 'Presidential Address (Session 406)'
+        id: '440',
+        title: 'Presidential Address (Session 440)'
       },
       {
-        id: '219',
-        title: 'Presidential Forum (Session 219)'
+        id: '241',
+        title: 'Presidential Plenary (Session 241)'
       },
       {
-        type: 'menu-head',
+        type: 'subhead',
         title: 'Informational Sessions and Workshops'
+      },
+      {
+        id: 'info/connected-academics',
+        title: 'Connected Academics'
       },
       {
         id: 'info/celj',
         title: 'Council of Editors of Learned Journals'
       },
       {
-        id: 'info/government-careers',
-        title: 'Government Careers'
+        id: '80',
+        title: 'Government Careers (Session 80)'
       },
       {
-        id: 'info/neh',
-        title: 'NEH Information'
+        id: '319',
+        title: 'NEH Information (Session 319)'
       },
       {
-        type: 'menu-head',
+        type: 'subhead',
         title: 'Governance'
       },
       {
-        id: 'info/delegate-assembly',
-        title: 'Delegate Assembly'
+        id: '571',
+        title: 'Delegate Assembly (Session 571)'
       },
       {
-        type: 'menu-head',
+        type: 'subhead',
         title: 'Emergencies'
       },
       {
@@ -425,8 +367,8 @@ module.exports = function (Module) {
         title: 'Illness and Medical Emergencies'
       },
       {
-        type: 'menu-head',
-        title: '2016 Convention'
+        type: 'subhead',
+        title: '2017 Convention'
       },
       {
         id: 'info/calls-for-papers',

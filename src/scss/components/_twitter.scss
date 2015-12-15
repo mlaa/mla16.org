@@ -1,0 +1,25 @@
+// Twitter
+
+.conversation {
+
+  #app {
+    margin-top: 70px;
+  }
+
+  .conversation-container {
+    bottom: 0;
+    max-width: $max-width;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+  }
+
+  .twitter-timeline-rendered {
+    float: left;
+  }
+
+  .placeholder {
+    visibility: hidden;
+  }
+
+}

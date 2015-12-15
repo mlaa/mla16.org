@@ -8,18 +8,20 @@ module.exports = function (Module, App, Backbone) {
 
     // Set defaults.
     defaults: {
-      href: '',
-      title: ''
+      title: '',
+      href: null,
+      icon: null
     },
 
-    formatTitle: function () {
+    getLinkAttributes: function () {
 
-      var title = this.get('title');
-      var sequence = this.get('seq');
-      var isRegular = /^\d+$/.test(sequence);
+      var href = this.get('href');
+      var icon = this.get('icon');
 
       return {
-        title: (isRegular) ? sequence + '. ' + title : title
+        childClass: (icon) ? 'icon icon-' + icon : '',
+        href: (href) ? href : '/' + this.get('id'),
+        target: (href) ? 'blank' : ''
       };
 
     }
@@ -31,9 +33,6 @@ module.exports = function (Module, App, Backbone) {
   });
 
   Module.Models = Module.Models || {};
-  Module.Models.Menu = {
-    Model: Model,
-    Collection: Collection
-  };
+  Module.Models.MenuCollection = Collection;
 
 };

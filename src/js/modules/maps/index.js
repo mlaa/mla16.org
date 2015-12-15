@@ -5,7 +5,6 @@ module.exports = function (Module, App, Backbone) {
   'use strict';
 
   require('./data/map-data.js')(Module, App, Backbone);
-  require('./models/map-model.js')(Module, App, Backbone);
   require('./views/map-view.js')(Module, App, Backbone);
 
   var Router = require('./routers/map-router.js')(Module, App, Backbone);

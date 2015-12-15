@@ -7,6 +7,8 @@
     <xsl:param name="json-dir"/>
 
     <xsl:variable name="public-sessions">|241|651A|572|348|588|593|623|693|E052|66|500|745|</xsl:variable>
+    <xsl:variable name="special-events">|348|588|593|623|E052|693|</xsl:variable>
+    <xsl:variable name="connected-academics">|2|233|306|364|676|763|</xsl:variable>
     <xsl:variable name="presidential-theme-sessions">|1|7|8|9|10|11|12|20|22|24|30|32|36|38|42|45|50|51|52|56|57|61|62|63|66|68|69|73|74|76|81|82|83|87|90|97|98|103|104|108|110|113|124|125|133|136|139|140|144|145|146|151|154|160|163|165|167|169|170|171|172|173|174|175|184|188|189|191|192|195|199|208|210|212|213|214|217|220|227|230|231|233|234|238|241|249|252|253|254|255|256|258|260|264|266|267|269|272|273|274|276|280|282|283|284|285|287|293|295|296|297|301|306|307|308|312|315|318|320|324|330|331|332|333|334|337|340|344|345|346|348|349|350|352|357|364|365|366|369|370|375|377|378|383|384|387|389|390|391|393|395|396|397|398|399|400|402|407|409|410|414|418|421|424|425|427|429|431|432|436|437|440|449|452|455|456|458|459|461|462|463|464|465|466|467|471|472|474|477|480|482|486|493|495|496|498|500|504|505|507|508|510|520|521|528|530|531|534|535|539|540|542|545|546|547|548|549|551|555|557|558|563|565|567|568|569|577|579|583|589|591|595|596|597|600|601|605|606|607|608|612|620|623|624|630|632|635|637|642|643|645|652|655|658|659|661|664|669|675|676|679|683|684|686|688|689|690|703|706|708|709|713|714|715|716|721|723|725|726|728|729|731|732|736|738|741|744|745|747|748|751|763|764|767|772|773|779|780|781|782|783|788|793|796|805|806|807|808|809|814|815|816|819|820|821|822|825|826|831|832|837|840|</xsl:variable>
 
     <xsl:variable name="morning">|4|5|6|7|8|9|10|11|</xsl:variable>
@@ -98,7 +100,7 @@
     <!-- First pass -->
 
     <xsl:template match="LIST_G_P_SEQ">
-        <xsl:apply-templates select="G_P_SEQ"/>
+        <xsl:apply-templates select="G_P_SEQ[P_DAY and P_DAY != '']"/>
     </xsl:template>
 
     <xsl:template match="G_P_SEQ">
@@ -164,7 +166,7 @@
 
                     <xsl:variable name="start-time-abbrev">
                         <xsl:choose>
-                            <xsl:when test="$start-meridien = 'p.m.'"><xsl:value-of select="number(regex-group(1)) + 12"/></xsl:when>
+                            <xsl:when test="$start-meridien = 'p.m.' and number(regex-group(1)) != 12"><xsl:value-of select="number(regex-group(1)) + 12"/></xsl:when>
                             <xsl:when test="$start-meridien = '[Unknown]'">[Unknown]</xsl:when>
                             <xsl:otherwise><xsl:value-of select="regex-group(1)"/></xsl:otherwise>
                         </xsl:choose>
@@ -172,7 +174,7 @@
 
                     <xsl:variable name="end-time-abbrev">
                         <xsl:choose>
-                            <xsl:when test="$end-meridien = 'p.m.'"><xsl:value-of select="number(regex-group(5)) + 12"/></xsl:when>
+                            <xsl:when test="$end-meridien = 'p.m.' and number(regex-group(5)) != 12"><xsl:value-of select="number(regex-group(5)) + 12"/></xsl:when>
                             <xsl:when test="$end-meridien = '[Unknown]'">[Unknown]</xsl:when>
                             <xsl:otherwise><xsl:value-of select="regex-group(5)"/></xsl:otherwise>
                         </xsl:choose>
@@ -193,7 +195,7 @@
                             <xsl:when test="contains($morning, concat('|', $end-time-abbrev, '|'))">mor</xsl:when>
                             <xsl:when test="contains($afternoon, concat('|', $end-time-abbrev, '|'))">aft</xsl:when>
                             <xsl:when test="contains($evening, concat('|', $end-time-abbrev, '|'))">eve</xsl:when>
-                            <xsl:when test="contains($late-night, concat('|', $start-time-abbrev, '|'))">ln</xsl:when>
+                            <xsl:when test="contains($late-night, concat('|', $end-time-abbrev, '|'))">ln</xsl:when>
                             <xsl:otherwise>[Unknown]</xsl:otherwise>
                         </xsl:choose>
                     </xsl:variable>
@@ -252,6 +254,14 @@
                 <type abbrev="pub">Open to the Public</type>
             </xsl:if>
 
+            <xsl:if test="contains($special-events, concat('|', P_SEQ, P_SEQ_SFX, '|'))">
+                <type abbrev="spe">Special Event</type>
+            </xsl:if>
+
+            <xsl:if test="contains($connected-academics, concat('|', P_SEQ, P_SEQ_SFX, '|'))">
+                <type abbrev="aca">Connected Academics</type>
+            </xsl:if>
+
             <details>
 
                 <line role="calendar"><xsl:value-of select="translate(P_TM_SLOT, '+', '–')"/></line>
@@ -264,68 +274,28 @@
 
                         <xsl:if test="P_DTL_LINE and P_DTL_LINE != '' and P_PRINT_ORD != '95'">
 
-                            <!-- These series of RegExes impart italics and insert links around e-mail addresses and URLs. -->
-                            <!-- They are "barely good enough" e-mail address / URL detectors, and they are TERRIBLE e-mail address / URL validators! -->
-                            <!-- XSLT RegEx is sloooooooooooow. -->
-                            <!-- UPDATE 2012-11-27: Added more Os to slow. -->
-
                             <xsl:variable name="sequence" select="../../P_SEQ"/>
 
                             <xsl:choose>
 
-                                <xsl:when test="P_PRINT_ORD &lt;= 10 or ($sequence != '406' and $sequence != '641')">
+                                <xsl:when test="P_PRINT_ORD &lt;= 10 or ($sequence != '440' and $sequence != '692')">
 
                                     <line>
 
-                                        <xsl:analyze-string select="translate(P_DTL_LINE, '+', '–')" regex="(https?://[^ ]+[^\. ])">
-                                            <xsl:matching-substring><a href="{regex-group(1)}" target="_blank"><xsl:value-of select="regex-group(1)"/></a></xsl:matching-substring>
-                                            <xsl:non-matching-substring>
+                                        <xsl:analyze-string select="translate(P_DTL_LINE, '+', '–')" regex="_([^_]+)_">
+                                          <xsl:matching-substring><em><xsl:value-of select="regex-group(1)"/></em></xsl:matching-substring>
+                                          <xsl:non-matching-substring>
 
-                                                <xsl:analyze-string select="." regex="([0-9A-Za-z][^&lt;&gt; ]*@[0-9A-Za-z][^&lt;&gt; ]*\.[A-Za-z]{{2,9}})">
-                                                    <xsl:matching-substring><a target="_blank"><xsl:attribute name="href">mailto:<xsl:value-of select="regex-group(1)"/></xsl:attribute><xsl:value-of select="regex-group(1)"/></a></xsl:matching-substring>
-                                                    <xsl:non-matching-substring>
-
-                                                          <xsl:analyze-string select="." regex="([^@ ]{{4,}}\.(com|org|net|uk|gov|edu))([ \.,;\(])">
-                                                            <xsl:matching-substring><a href="http://{regex-group(1)}" target="_blank"><xsl:value-of select="regex-group(1)"/></a><xsl:value-of select="regex-group(3)"/></xsl:matching-substring>
-                                                            <xsl:non-matching-substring>
-
-                                                                  <xsl:analyze-string select="." regex="see (meetings|sessions) ([0-9]+) and ([0-9]+) and ([0-9]+)">
-                                                                    <xsl:matching-substring>see <xsl:value-of select="regex-group(1)"/><xsl:text> </xsl:text><a href="#{regex-group(2)}"><xsl:value-of select="regex-group(2)"/></a>, <a href="#{regex-group(3)}"><xsl:value-of select="regex-group(3)"/></a>, and <a href="#{regex-group(4)}"><xsl:value-of select="regex-group(4)"/></a></xsl:matching-substring>
-                                                                    <xsl:non-matching-substring>
-
-                                                                        <xsl:analyze-string select="." regex="see (meetings|sessions) ([0-9]+) and ([0-9]+)">
-                                                                            <xsl:matching-substring>see <xsl:value-of select="regex-group(1)"/><xsl:text> </xsl:text><a href="#{regex-group(2)}"><xsl:value-of select="regex-group(2)"/></a> and <a href="#{regex-group(3)}"><xsl:value-of select="regex-group(3)"/></a></xsl:matching-substring>
-                                                                            <xsl:non-matching-substring>
-
-                                                                                <xsl:analyze-string select="." regex="_([^_]+)_">
-                                                                                  <xsl:matching-substring><em><xsl:value-of select="regex-group(1)"/></em></xsl:matching-substring>
-                                                                                  <xsl:non-matching-substring>
-
-                                                                                      <xsl:analyze-string select="." regex="@IT@([^@]+)@RO@">
-                                                                                          <xsl:matching-substring><em><xsl:value-of select="regex-group(1)"/></em></xsl:matching-substring>
-                                                                                          <xsl:non-matching-substring>
-                                                                                              <xsl:analyze-string select="." regex="^  . ">
-                                                                                                  <xsl:matching-substring></xsl:matching-substring>
-                                                                                                  <xsl:non-matching-substring>
-                                                                                                      <xsl:value-of select="replace(., '--', '—')"/>
-                                                                                                  </xsl:non-matching-substring>
-                                                                                              </xsl:analyze-string>
-                                                                                          </xsl:non-matching-substring>
-                                                                                        </xsl:analyze-string>
-
-                                                                                    </xsl:non-matching-substring>
-                                                                                </xsl:analyze-string>
-
-                                                                            </xsl:non-matching-substring>
-                                                                        </xsl:analyze-string>
-
-                                                                    </xsl:non-matching-substring>
-                                                                </xsl:analyze-string>
-
-                                                            </xsl:non-matching-substring>
-                                                        </xsl:analyze-string>
-
-                                                    </xsl:non-matching-substring>
+                                              <xsl:analyze-string select="." regex="@IT@([^@]+)@RO@">
+                                                  <xsl:matching-substring><em><xsl:value-of select="regex-group(1)"/></em></xsl:matching-substring>
+                                                  <xsl:non-matching-substring>
+                                                      <xsl:analyze-string select="." regex="^  . ">
+                                                          <xsl:matching-substring></xsl:matching-substring>
+                                                          <xsl:non-matching-substring>
+                                                              <xsl:value-of select="replace(., '--', '—')"/>
+                                                          </xsl:non-matching-substring>
+                                                      </xsl:analyze-string>
+                                                  </xsl:non-matching-substring>
                                                 </xsl:analyze-string>
 
                                             </xsl:non-matching-substring>
@@ -544,7 +514,7 @@
                 <xsl:value-of select="@abbrev"/>
                 <xsl:text>"</xsl:text>
             </xsl:for-each>
-            <xsl:if test="room = 'Exhibit Hall Theater'">
+            <xsl:if test="contains(room, 'Exhibit Hall Theater')">
                 <xsl:text>,"eh"</xsl:text>
             </xsl:if>
             <xsl:text>]</xsl:text>

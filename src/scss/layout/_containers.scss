@@ -1,7 +1,24 @@
 // Containers
 
+html {
+  background-color: $off-white;
+  height: 100%;
+}
+
 body {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
-  max-width: 500px;
-  min-width: 280px;
+  max-width: $max-width;
+  min-height: 100%;
+  min-width: $min-width;
+  z-index: 100;
+}
+
+#app {
+  background-color: $white;
+  flex-grow: 1;
+  margin-top: 122px;
+  z-index: 100;
 }

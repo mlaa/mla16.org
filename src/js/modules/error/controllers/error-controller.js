@@ -4,59 +4,24 @@
 
 module.exports = function (Module, App, Backbone) {
 
-  var _emptyError = function (header) {
+  var showError = function (error) {
 
-    var error = {
-      message: 'Nothing matched your request. Please try again.'
-    };
+    error = error || {};
 
-    // Show error.
+    App.vent.trigger('ui:setPageClasses', 'error');
+    App.vent.trigger('ui:setPageTitle', 'Error');
+
     App.Content.show(
-      new Module.Views.Error.CollectionView({
-        collection: new Module.Models.Error.Collection(header.concat([error]))
+      new Module.Views.Error({
+        model: new Module.Models.ErrorModel(error)
       })
     );
-
   };
 
-  var _notFoundError = function (type) {
-
-    var error = {
-      message: 'The ' + type + ' you requested was not found.'
-    };
-
-    // Show error.
-    App.Content.show(
-      new Module.Views.Error.CollectionView({
-        collection: new Module.Models.Error.Collection([error])
-      })
-    );
-
-  };
-
-  var _unknownError = function () {
-
-    var error = {
-      message: 'An unexpected error occurred. Please try again later.'
-    };
-
-    // Show error.
-    App.Content.show(
-      new Module.Views.Error.CollectionView({
-        collection: new Module.Models.Error.Collection([error])
-      })
-    );
-
-  };
-
-  App.vent.bind('error:empty', _emptyError);
-  App.vent.bind('error:notfound', _notFoundError);
-  App.vent.bind('error:unknown', _unknownError);
+  App.vent.bind('error', showError);
 
   return Backbone.Marionette.Controller.extend({
-    handleError: function () {
-      _notFoundError('resource');
-    }
+    showError: showError
   });
 
 };

@@ -136,26 +136,12 @@
     </xsl:template>
 
     <xsl:template match="person">
-
-        <xsl:text>{</xsl:text>
-        <xsl:text>"id":"</xsl:text>
-        <xsl:value-of select="@id"/>
-        <xsl:text>",</xsl:text>
-        <xsl:text>"cat":["</xsl:text>
-        <xsl:value-of select="@sort"/>
-        <xsl:text>"],</xsl:text>
-        <xsl:text>"sessions":[</xsl:text>
-        <xsl:for-each select="sessions/session">
-            <xsl:text>"</xsl:text>
-            <xsl:value-of select="."/>
-            <xsl:text>"</xsl:text>
-            <xsl:if test="position() != last()">,</xsl:if>
-        </xsl:for-each>
-        <xsl:text>],</xsl:text>
-        <xsl:text>"name":"</xsl:text><xsl:value-of select="first"/><xsl:text> </xsl:text><xsl:value-of select="last"/><xsl:text>"</xsl:text>
-        <xsl:text>}</xsl:text>
+        <xsl:text>"</xsl:text>
+        <xsl:value-of select="first"/>
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="last"/>
+        <xsl:text>"</xsl:text>
         <xsl:if test="position() != last()">,</xsl:if>
-
     </xsl:template>
 
 </xsl:stylesheet>

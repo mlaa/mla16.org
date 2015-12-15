@@ -1,11 +1,19 @@
 {
-  baseDir: 'public',
-  options: {
-    hash: true,
-    timestamp: false,
-    preferOnline: true,
-    network: ['*'],
-    filename: 'public/app.manifest',
-    exclude: 'app.manifest'
+  "baseDir": "public",
+  "source": ["public/**"],
+  "target": "public/build",
+  "options": {
+    "hash": true,
+    "timestamp": false,
+    "fallback": "/ /index.html",
+    "prefix": "/",
+    "network": ["*"],
+    "filename": "app.manifest",
+    "exclude": [
+      "robots.txt",
+      "build/app.manifest",
+      "build/*.map",
+      "img/icons/*"
+    ]
   }
 }

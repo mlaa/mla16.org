@@ -3,40 +3,94 @@
 $search-icon-text-color: #cdd2d6;
 $search-terms-border-color: #cdd2d6;
 
-fieldset {
-  margin: 0 8px 0 5px;
-  position: relative;
+.search {
+
+  #app {
+    margin-top: 175px;
+  }
+
 }
 
 #search {
-  display: none;
+
+  background-color: $white;
+  box-sizing: border-box;
+  height: 50px;
+  margin: 0;
+  max-width: $max-width;
+  padding: 0 12px 10px 12px;
+  position: fixed;
+  top: 122px;
+  width: 100%;
+
+  fieldset {
+    position: relative;
+  }
+
+  .submit {
+    position: absolute;
+    visibility: hidden;
+  }
+
 }
 
-.home #search {
-  display: block;
-}
-
-.icon-search {
-  color: $search-icon-text-color;
-  font-size: 0.9em;
-  left: 8px;
-  position: absolute;
-  top: 6px;
-}
-
-#terms {
+#terms,
+.tt-hint {
   appearance: none;
   background-color: $white;
   border: solid 1px $search-terms-border-color;
   border-radius: 8px;
-  font-size: 13px;
-  height: 20px;
-  margin-top: 2px;
-  padding: 3px 0;
-  text-indent: 27px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 2px 0 0 0;
+  outline: none;
+  padding: 8px;
   width: 100%;
 }
 
-#terms::placeholder {
-  text-indent: 27px;
+// Typeahead.js
+// Adapted from http://stackoverflow.com/questions/20198247/
+
+.twitter-typeahead {
+  width: 100%;
+}
+
+.tt-query {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  border-color: transparent;
+  color: $dark-grey;
+}
+
+// used to be tt-dropdown-menu in older versions
+.tt-menu {
+  background-color: $white;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 4px;
+  padding: 4px 0;
+  width: 100%;
+}
+
+.tt-suggestion {
+
+  line-height: 24px;
+  overflow: hidden;
+  padding: 3px 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  p {
+    margin: 0;
+  }
+
+  &:hover {
+    background-color: lighten($button-border-color, 20%);
+    color: $black;
+    cursor: pointer;
+  }
+
 }

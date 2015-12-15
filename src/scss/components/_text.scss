@@ -1,21 +1,21 @@
 // Text
 
-$subhead-text-color: #40474f;
-
 .text {
 
-  padding: 1em 1em 1em 0.75em;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  padding: 0 15px 15px 10px;
 
   h3 {
-    margin: 0.25em 0 1em 0;
+    font-size: 1.2em;
+    margin: 1em 0;
     padding: 0;
   }
 
   h4 {
-    color: $subhead-text-color;
+    color: $text-color-minor;
     font-size: 1em;
-    line-height: 1.25em;
-    margin: 1em 0 0.5em 0;
+    margin: 0.25em 0 0.5em 0;
     padding: 0;
   }
 
@@ -24,21 +24,28 @@ $subhead-text-color: #40474f;
     padding: 0;
   }
 
-  h4:first-child,
-  p:first-child {
-    margin-top: 0.5em;
-  }
-
-  li {
-    list-style-type: none;
-    margin: 0 0 0.25em 0;
+  ul {
+    margin: 0 0 1em 0;
     padding: 0 1.5em;
   }
 
-}
+  .cal {
+    font-weight: normal;
+  }
 
-.text-head {
-  font-size: 1em;
-  margin: 0;
-  min-height: 21px;
+  .loc {
+    font-style: italic;
+  }
+
+  .title {
+    font-size: 1em;
+    margin-top: 0.25em;
+  }
+
+  .code {
+    background-color: $light-grey;
+    border-radius: 5px;
+    padding: 3px 5px;
+  }
+
 }

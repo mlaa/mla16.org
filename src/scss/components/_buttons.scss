@@ -1,0 +1,48 @@
+// Buttons
+
+.button {
+
+  border: solid 1px $button-border-color;
+  border-radius: 5px;
+  color: $icon-text-color;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 5px 8px;
+  text-decoration: none;
+
+  &:hover,
+  &.active {
+
+    background-color: $icon-text-color;
+    border-color: $icon-text-color;
+    color: $white;
+
+    &:before {
+      color: $white;
+    }
+
+  }
+
+}
+
+.icon.button:before {
+  margin-right: 0.3em;
+}
+
+.button-filter,
+.button-back {
+  float: right;
+  line-height: 30px;
+  padding: 0 8px;
+}
+
+.actions {
+
+  margin: 0 0 20px 0;
+
+  .button {
+    margin-right: 5px;
+  }
+
+}

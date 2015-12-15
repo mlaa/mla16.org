@@ -9,8 +9,8 @@ module.exports = function (Module, App, Backbone) {
     // Generate section-level view.
     showInfo: function (resource) {
 
-      // Activate menu tab.
-      App.vent.trigger('menu:tab', 'info');
+      App.vent.trigger('ui:setPageClasses', 'info');
+      App.vent.trigger('ui:showLoading');
 
       // Append the view to the main region.
       App.Data.Promises.info.done(function (info) {
@@ -18,12 +18,12 @@ module.exports = function (Module, App, Backbone) {
         if (info[resource]) {
           // Add view to content pane.
           App.Content.show(
-            new Module.Views.Info({
-              model: new Module.Models.Info(info[resource])
+            new Module.Views.InfoView({
+              model: new Backbone.Model(info[resource])
             })
           );
         } else {
-          App.vent.trigger('error:notfound');
+          App.vent.trigger('error');
         }
 
       });

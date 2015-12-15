@@ -1,23 +1,64 @@
 // Header
 
 #header {
+  background-image: url($assets-background-image);
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: 500px 125px;
+  height: 70px;
+  margin: 0 auto;
+  max-width: $max-width;
+  min-width: $min-width;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 200;
 }
 
 #masthead {
 
-  background-color: $white;
+  position: relative;
 
   h1 {
-    background-image: url('/img/ui/header.png');
-    background-position: center center;
+    background-image: url($assets-header-image);
+    background-position: center 5px;
     background-repeat: no-repeat;
-    background-size: 500px 36px;
-    cursor: pointer;
-    height: 36px;
+    background-size: 500px 60px;
+    height: 70px;
     margin: 0;
     padding: 0;
     width: 100%;
   }
 
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li:first-child {
+    left: 0;
+    position: absolute;
+    top: 24px;
+  }
+
+  li:last-child {
+    position: absolute;
+    right: 0;
+    top: 24px;
+  }
+
+  a {
+    color: $off-white;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 15px;
+    text-decoration: none;
+  }
+
+}
+
+.menu-link a:before,
+.search-link a:before {
+  color: $icon-text-color-light;
 }

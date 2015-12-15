@@ -22,9 +22,12 @@ var App = new Backbone.Marionette.Application();
 // Add regions.
 App.addRegions({
   Content: '#content',
-  Actions: '#actions',
+  Message: '#message',
   Notice: '#notice'
 });
+
+// Adjust behavior if we are server-side.
+App.isPhantom = typeof window.callPhantom === 'function';
 
 // Load modules.
 App.module('Appcache', require('./modules/appcache'));
@@ -35,14 +38,19 @@ App.module('Info', require('./modules/info'));
 App.module('Links', require('./modules/links'));
 App.module('Maps', require('./modules/maps'));
 App.module('Menus', require('./modules/menus'));
-App.module('People', require('./modules/people'));
 App.module('Program', require('./modules/program'));
+App.module('Render', require('./modules/render'));
 App.module('Search', require('./modules/search'));
+App.module('Storage', require('./modules/storage'));
+App.module('Twitter', require('./modules/twitter'));
+App.module('Typeahead', require('./modules/typeahead'));
+App.module('UI', require('./modules/ui'));
 App.module('Updated', require('./modules/updated'));
 
 // Start the history listener.
 App.on('start', function () {
-  Backbone.history.start({pushState: true});
+  var startClient = App.isPhantom || App.Links.clientSidePages.indexOf(Backbone.history.fragment) !== -1;
+  Backbone.history.start({pushState: true, silent: !startClient});
 });
 
 // Start the application.

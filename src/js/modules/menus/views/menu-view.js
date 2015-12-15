@@ -4,64 +4,50 @@
 
 module.exports = function (Module, App, Backbone) {
 
-  var menuTemplate = require('../templates/menu-item.tpl');
-  var menuHeadTemplate = require('../templates/menu-head.tpl');
-  var menuExternalTemplate = require('../templates/menu-item-external.tpl');
-  var menuIconTemplate = require('../templates/menu-item-icon.tpl');
+  var $ = Backbone.$;
 
-  var ItemView = Backbone.Marionette.ItemView.extend({
+  var HeadView = Backbone.Marionette.ItemView.extend({
 
     tagName: 'li',
-    template: menuTemplate,
+    template: require('../templates/menu-head.tpl'),
 
     className: function () {
-      return this.model.attributes.type || this.model.attributes.style || null;
-    },
-
-    serializeData: function () {
-      return this.model.toJSON();
-    },
-
-    initialize: function () {
-
-      // Swap in alternate template when needed.
-      if (this.model.attributes.type) {
-        this.template = menuHeadTemplate;
-      }
-
-      if (this.model.attributes.href) {
-        this.template = menuExternalTemplate;
-      }
-
-      if (this.model.attributes.childClass) {
-        this.template = menuIconTemplate;
-      }
-
+      return this.model.get('type') || null;
     }
 
   });
 
-  var CollectionView = Backbone.Marionette.CollectionView.extend({
+  var ItemView = Backbone.Marionette.ItemView.extend({
 
-    childView: ItemView,
-    tagName: 'ul',
-    className: 'list',
+    tagName: 'li',
+    template: require('../templates/menu-item.tpl'),
 
-    events: {
-      'click a': 'saveMenuState'
+    serializeData: function () {
+      return $.extend(
+        this.model.toJSON(),
+        this.model.getLinkAttributes()
+      );
+    }
+
+  });
+
+  var CompositeView = Backbone.Marionette.CompositeView.extend({
+
+    getChildView: function (model) {
+      return (model.get('type')) ? HeadView : ItemView;
     },
 
-    // When user leaves, save scroll position.
-    saveMenuState: function () {
-      App.vent.trigger('menu:saveMenuState');
+    childViewContainer: '.list',
+
+    template: require('../templates/menu.tpl'),
+
+    initialize: function () {
+      App.vent.trigger('ui:setPageTitle', this.model.get('title'));
     }
 
   });
 
   Module.Views = Module.Views || {};
-  Module.Views.Menu = {
-    ItemView: ItemView,
-    CollectionView: CollectionView
-  };
+  Module.Views.MenuView = CompositeView;
 
 };

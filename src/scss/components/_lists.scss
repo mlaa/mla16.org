@@ -1,99 +1,84 @@
 // Lists
 
-$list-link-color: #40474f;
-$list-text-color: #697580;
-$list-text-minor-color: #666;
-$list-head-border-color: #3f474f;
-$list-head-text-color: #3f474f;
-$list-icon-text-color: #40474f;
-$list-filter-background-color: #3f474f;
-$list-filter-border-color: #8a8a8a;
-$list-subhead-background-color: #467f2e;
-$list-subhead-border-color: #265f0e;
-
 .list {
 
+  background-color: $white;
   list-style: none;
   margin: 0;
   padding: 0;
 
   a {
-    background-position: 98% center;
-    background-repeat: no-repeat;
-    border-bottom: solid 1px $off-white;
-    color: $list-link-color;
+    border-top: solid 1px $text-border-color;
+    color: $link-color;
     display: block;
-    margin: 0 12px;
-    padding: 0.8em 0;
+    font-size: 18px;
+    margin: 0;
+    padding: 12px 10px;
+    -webkit-tap-highlight-color: $link-tap-background-color;
     text-decoration: none;
-    z-index: 250;
+    text-size-adjust: none;
+    -webkit-touch-callout: none;
+    user-select: none;
   }
 
-  b {
+  .title {
     display: block;
-    font-size: 1.1em;
     font-weight: 400;
-    margin-right: 4%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
-  span {
-    color: $list-text-color;
+  .loc {
+    color: $off-black;
     display: block;
+    font-size: 16px;
     font-style: normal;
-    margin: 0.2em 4% 0 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .options {
-    color: $list-text-minor-color;
-    padding-right: 4em;
+    margin: 4px 0 0 0;
   }
 
   .icon:before {
-    color: $list-icon-text-color;
+    color: $icon-text-color;
   }
 
 }
 
-.head,
-.menu-head,
-.filter-head,
+.section-head,
 .text-head {
   background-color: $white;
-  border-bottom: solid 1px $list-head-border-color;
-  color: $list-head-text-color;
-  font-weight: bold;
-  padding: 0.5em 12px 0.25em 0.75em;
+  box-sizing: border-box;
+  color: $text-color;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 36px;
+  margin: 0;
+  padding: 10px 12px 10px 10px;
+  width: 100%;
 }
 
-.head,
-.text-head,
-.filter-head,
-.subhead {
-  cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.section-head {
+  height: 52px;
+  max-width: $max-width;
+  position: fixed;
+  top: 70px;
 }
 
 .subhead,
-.filter-subhead,
-.group-subhead {
-  background-color: $list-filter-background-color;
-  border-bottom: solid 1px $list-filter-border-color;
-  color: $white;
-  font-size: 0.9em;
-  padding: 0.4em 0.75em 0.2em 0.85em;
+.menu-head {
+
+  background-color: $subhead-background-color;
+  border-bottom: solid 1px $subhead-border-color;
+  color: $subhead-text-color;
+  font-size: 16px;
+  padding: 8px 12px 8px 10px;
+
+  &:before {
+    color: $icon-text-color-light;
+  }
+
 }
 
 .subhead {
-  background-color: $list-subhead-background-color;
-  border-color: $list-subhead-border-color;
+  cursor: pointer;
+  position: sticky;
+  top: 122px;
 }
 
 .collapsed {
@@ -102,14 +87,30 @@ $list-subhead-border-color: #265f0e;
     display: none;
   }
 
-  .head,
-  .filter-head {
-    display: list-item;
+  .section-head {
+    display: block;
   }
 
   .subhead {
-    display: block;
+    display: list-item;
     position: static;
   }
 
+}
+
+// Prevent wrapping of long titles.
+.subhead,
+.section-head,
+.list .title,
+.list .loc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Fix border crash between heads and first item in list.
+.subhead + li a,
+.menu-head + li a,
+li:first-child a {
+  border-top: 0;
 }

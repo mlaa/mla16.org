@@ -1,1 +1,1 @@
-<a href="#<%= id %>"><%= title %></a>
+<a class="<%= childClass %>" href="<%= href %>" target="<%= target %>"><%= title %></a>

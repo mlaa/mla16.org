@@ -8,5 +8,9 @@
         "/": "public"
       }
     }
+  },
+  "proxy": {
+    "url": "https://apps.mla.org/program/program_search",
+    "route": "/program/program_search"
   }
 }

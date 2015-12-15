@@ -1,7 +1,7 @@
 {
   "source": [
     "*.js",
-    "gulp/**/*.js",
+    "server/**/*.js",
     "src/js/**/*.js"
   ]
 }

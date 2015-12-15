@@ -6,7 +6,8 @@ module.exports = function (Module, App, Backbone) {
 
   var Model = Backbone.Model.extend({
     defaults: {
-      active: ''
+      active: false,
+      style: 'filter'
     }
   });
 
@@ -15,9 +16,6 @@ module.exports = function (Module, App, Backbone) {
   });
 
   Module.Models = Module.Models || {};
-  Module.Models.Filter = {
-    Model: Model,
-    Collection: Collection
-  };
+  Module.Models.FilterCollection = Collection;
 
 };

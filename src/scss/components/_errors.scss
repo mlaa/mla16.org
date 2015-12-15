@@ -1,10 +1,16 @@
 // Errors
 
-.error {
+#content .error {
+
+  background-color: $light-grey;
+  margin: 0 10px;
+
   p {
+    font-size: 16px;
     font-weight: 600;
     margin: 0;
-    padding: 3em 2em;
+    padding: 1.5em 10px;
     text-align: center;
   }
+
 }

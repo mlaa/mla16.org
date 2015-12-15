@@ -4,22 +4,15 @@
 
 module.exports = function (Module, App, Backbone) {
 
-  var infoTemplate = require('../templates/info.tpl');
-
   Module.Views = Module.Views || {};
 
-  Module.Views.Info = Backbone.Marionette.ItemView.extend({
+  Module.Views.InfoView = Backbone.Marionette.ItemView.extend({
 
-    tagName: 'div',
     className: 'info',
-    template: infoTemplate,
+    template: require('../templates/info.tpl'),
 
-    events: {
-      'click .text-head': 'loadParentMenu'
-    },
-
-    loadParentMenu: function() {
-      App.vent.trigger('menu:showParent', 'info');
+    initialize: function () {
+      App.vent.trigger('ui:setPageTitle', this.model.get('title'));
     }
 
   });

@@ -4,13 +4,12 @@
 
 module.exports = function (Module, App, Backbone) {
 
-  var updatedTemplate = require('../templates/updated.tpl');
+  var ItemView = Backbone.Marionette.ItemView.extend({
+    tagName: 'p',
+    template: require('../templates/updated.tpl')
+  });
 
   Module.Views = Module.Views || {};
-
-  Module.Views.Updated = Backbone.Marionette.ItemView.extend({
-    tagName: 'p',
-    template: updatedTemplate
-  });
+  Module.Views.UpdatedView = ItemView;
 
 };

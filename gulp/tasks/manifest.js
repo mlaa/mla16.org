@@ -1,14 +1,13 @@
-/* Use BrowserSync to serve our site locally with autoreload. */
+/* Create an app cache manifest. */
 
 'use strict';
 
-var config = require('../config/serve.json');
-var browserSync = require('browser-sync');
-var historyApiFallback = require('connect-history-api-fallback');
-
-// Add middleware.
-config.browserSync.server.middleware = [historyApiFallback()];
+var config = require('../config/manifest.json');
+var gulp = require('gulp');
+var manifest = require('gulp-manifest');
 
 module.exports = function () {
-  browserSync(config.browserSync);
+  gulp.src(config.source, { base: config.baseDir })
+    .pipe(manifest(config.options))
+    .pipe(gulp.dest(config.target));
 };
