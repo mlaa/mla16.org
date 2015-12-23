@@ -292,7 +292,7 @@
                                                       <xsl:analyze-string select="." regex="^  . ">
                                                           <xsl:matching-substring></xsl:matching-substring>
                                                           <xsl:non-matching-substring>
-                                                              <xsl:value-of select="replace(., '--', '—')"/>
+                                                              <xsl:value-of select="replace(replace(., ',,', ','), '--', '—')"/>
                                                           </xsl:non-matching-substring>
                                                       </xsl:analyze-string>
                                                   </xsl:non-matching-substring>
