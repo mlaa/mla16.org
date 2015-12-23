@@ -104,17 +104,17 @@
 
 # Compare INCOMING XML with PREVIOUS XML
 if `diff -q "$program_xml" "$archive_dir/program_latest.xml" >/dev/null`; then
-	echo "The program XML has not been updated."
+  echo "The program XML has not been updated."
 else
 
-	echo "UPDATED program XML has been detected!"
-	updated_files=YES
+  echo "UPDATED program XML has been detected!"
+  updated_files=YES
 
-	# Keep a copy of the updated XML.
-	cp $program_xml "$archive_dir/program_latest.xml"
+  # Keep a copy of the updated XML.
+  cp $program_xml "$archive_dir/program_latest.xml"
 
-	# Transform Oracle output.
-	transform_saxon8 "$program_xml" "$xsl_dir/program.xsl" "xml-dir=${xml_dir} json-dir=${json_dir}"
+  # Transform Oracle output.
+  transform_saxon8 "$program_xml" "$xsl_dir/program.xsl" "xml-dir=${xml_dir} json-dir=${json_dir}"
 
 fi
 
@@ -123,17 +123,17 @@ fi
 
 # Compare INCOMING XML with PREVIOUS XML
 if `diff -q "$people_xml" "$archive_dir/people_latest.xml" >/dev/null`; then
-	echo "The participant XML has not been updated."
+  echo "The participant XML has not been updated."
 else
 
-	echo "UPDATED participant XML has been detected!"
-	updated_files=YES
+  echo "UPDATED participant XML has been detected!"
+  updated_files=YES
 
-	# Keep a copy of the updated XML.
-	cp "$people_xml" "$archive_dir/people_latest.xml"
+  # Keep a copy of the updated XML.
+  cp "$people_xml" "$archive_dir/people_latest.xml"
 
-	# Transform Oracle output.
-	transform_saxon8 "$people_xml" "$xsl_dir/people.xsl" "xml-dir=${xml_dir} json-dir=${json_dir}"
+  # Transform Oracle output.
+  transform_saxon8 "$people_xml" "$xsl_dir/people.xsl" "xml-dir=${xml_dir} json-dir=${json_dir}"
 
 fi
 
@@ -146,10 +146,14 @@ if [ -n "$updated_files" ]; then
   cd "$xml_dir" && git commit *.xml -m "Updated program XML (${current_date}_${current_time})."
   cd "$json_dir" && git commit *.json -m "Updated program JSON (${current_date}_${current_time})."
 
-	# Deploy.
+  # Deploy.
   cd "$project_dir"
-  #aws s3 cp "$json_dir/*" s3://staging.mla16.org/data/
-  #aws cf invalidate
+  gulp manifest       # update app cache manifest
+  npm run cache       # creates cache of rendered pages for search bots
+  npm run sync        # copies static assets
+  npm run sync-cache  # copies cache
+  npm run invalidate  # invalidates static assets only, and requires cloudfront
+                      # preview flag in aws-cli config
 
   # Notify
   if [ -n "$notify_email" ]; then

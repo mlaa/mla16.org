@@ -47,6 +47,7 @@
   },
   "scripts": {
     "cache": "node server/cache.js",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E2SKT9QB8UR3FO --paths /build/* /data/*",
     "sync": "aws s3 sync --acl public-read --exclude '.DS_Store' --exclude '*/.DS_Store' public/ s3://staging.mla16.org/",
     "sync-cache": "aws s3 sync --acl public-read --content-type 'text/html; charset=utf-8' --exclude '.DS_Store' --exclude '*/.DS_Store' server/cache/ s3://staging.mla16.org/"
   }
