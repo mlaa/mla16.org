@@ -1,5 +1,7 @@
 /* Link handler module */
 
+/*global ga*/
+
 'use strict';
 
 module.exports = function (Module, App, Backbone) {
@@ -25,21 +27,21 @@ module.exports = function (Module, App, Backbone) {
   // Listen for internal links when pushState is enabled.
   $body.on('click', 'a', function (e) {
 
-    if (hasPushState) {
+    // Only act on internal links.
+    var href = $(this).attr('href');
 
-      // Only act on internal links.
-      var href = $(this).attr('href');
+    if (hasPushState && href && href.charAt(0) === '/') {
 
-      if (href && href.charAt(0) === '/') {
+      e.preventDefault();
 
-        e.preventDefault();
+      var scrollPos = document.body.scrollTop || document.documentElement.scrollTop || 0;
 
-        var scrollPos = document.body.scrollTop || document.documentElement.scrollTop || 0;
+      updateHistoryState({scrollPos: scrollPos});
+      Backbone.history.navigate(href.substring(1), true);
+      App.Storage.local.setItem('mla16-last-visited', href.substring(1));
 
-        updateHistoryState({scrollPos: scrollPos});
-        Backbone.history.navigate(href.substring(1), true);
-        App.Storage.local.setItem('mla16-last-visited', href.substring(1));
-
+      if (typeof ga === 'function') {
+        ga('send', 'pageview', href);
       }
 
     }
@@ -47,7 +49,7 @@ module.exports = function (Module, App, Backbone) {
   });
 
   // Listen for UI back-button clicks.
-  $('body').on('click', '.button-back', function () {
+  $body.on('click', '.button-back', function () {
     window.history.back();
   });
 
