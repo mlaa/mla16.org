@@ -247,6 +247,10 @@ module.exports = function (Module) {
         title: 'Childcare'
       },
       {
+        id: 'info/nursing',
+        title: 'Nursing Mothers'
+      },
+      {
         id: 'info/bill-w',
         title: 'Friends of Bill W.'
       },

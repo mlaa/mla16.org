@@ -72,7 +72,7 @@ module.exports = function (Module) {
     {
       type: 'venue',
       href: 'eh',
-      title: 'Exhibit Hall Theater'
+      title: 'Exhibit Hall Theater (ACC)'
     },
     {
       style: 'menu-head',
@@ -116,7 +116,7 @@ module.exports = function (Module) {
     'ln':  'Late-Night',
     'acc': 'ACC',
     'jwm': 'JW Marriott',
-    'eh':  'Exhibit Hall Theater',
+    'eh':  'Exhibit Hall Theater (ACC)',
     'off': 'Elsewhere',
     'aca': 'Connected Academics',
     'pub': 'Open to the Public',

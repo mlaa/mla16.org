@@ -17,7 +17,7 @@ module.exports = function (Module, App, Backbone) {
 
   var messages = {
     'loading': 'Loading',
-    'saved': 'Click the “Save” button on session pages to save them for later reference. ' +
+    'saved': 'Click the Save button on session pages to save them for later reference. ' +
       'Sessions are saved only on this browser and device.',
     'search': 'No sessions were found matching your search terms. Please try again.',
     'category': 'No sessions matched your selected categories. Please try again.'
