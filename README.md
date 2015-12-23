@@ -1,4 +1,4 @@
-# MLA16.org
+# mla16.org
 
 This is the Mobile Program for the 2016 MLA Convention in Austin. A hosted
 version can be found at [mla16.org][mla16].
@@ -6,14 +6,35 @@ version can be found at [mla16.org][mla16].
 ## Program data
 
 Structured data in XML format can be found in the `xml` folder. JSON data can
-be found in the `app/data` folder.
+be found in the `public/data` folder.
+
+## Prerendering
+
+This is a single page application built with [Backbone Marionette][marionette].
+In order to allow search engines to index the site, all pages are prerendered
+using [PhantomJS][phantom]. For the first page load, all visitors are served a 
+static, rendered page. Browsers navigate the site with JavaScript and HTML5 
+PushState, while search engines continue to request static pages from the 
+server.
 
 ## Build
 
-This project uses [Grunt][grunt] and [Browserify][browserify] and other stuff.
+Install dependencies:
 
 ```bash
-npm install && grunt
+npm install
+```
+
+Compile assets (requires [Gulp][gulp]):
+
+```bash
+gulp assets
+```
+
+Compile assets, start a local Web server, and watch for changes:
+
+```bash
+gulp
 ```
 
 ## License
@@ -23,6 +44,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 3.0 Un
 ![Creative Commons License](http://i.creativecommons.org/l/by-nc/3.0/88x31.png)
 
 [mla16]: http://mla16.org
-[grunt]: http://gruntjs.org
-[browserify]: http://browserify.org
+[marionette]: http://marionettejs.com
+[phantom]: http://phantomjs.org
+[gulp]: http://gulpjs.com
 [cc-by-nc]: http://creativecommons.org/licenses/by-nc/3.0/
