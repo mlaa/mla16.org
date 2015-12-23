@@ -152,8 +152,6 @@ if [ -n "$updated_files" ]; then
   npm run cache       # creates cache of rendered pages for search bots
   npm run sync        # copies static assets
   npm run sync-cache  # copies cache
-  npm run invalidate  # invalidates static assets only, and requires cloudfront
-                      # preview flag in aws-cli config
 
   # Notify
   if [ -n "$notify_email" ]; then
