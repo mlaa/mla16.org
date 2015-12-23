@@ -4,6 +4,9 @@
       "files": [
         "public/**/*.html",
         "public/**/*.png"
+      ],
+      "tasks": [
+        "manifest"
       ]
     },
     {
@@ -12,7 +15,8 @@
       ],
       "tasks": [
         "scss-lint",
-        "sass"
+        "sass",
+        "manifest"
       ]
     },
     {
@@ -22,7 +26,8 @@
       ],
       "tasks": [
         "js-lint",
-        "browserify"
+        "browserify",
+        "manifest"
       ]
     }
   ]
