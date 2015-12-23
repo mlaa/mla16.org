@@ -49,8 +49,7 @@ App.module('Updated', require('./modules/updated'));
 
 // Start the history listener.
 App.on('start', function () {
-  var startClient = App.isPhantom || App.Links.clientSidePages.indexOf(Backbone.history.fragment) !== -1;
-  Backbone.history.start({pushState: true, silent: !startClient});
+  Backbone.history.start({pushState: true});
 });
 
 // Start the application.
