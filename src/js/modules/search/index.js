@@ -41,7 +41,7 @@ module.exports = function (Module, App, Backbone) {
     return $.getJSON('/program/program_search?output=json&keyword=' + searchTerms)
 
       .fail(function () {
-        App.vent.trigger('error', searchObj);
+        App.vent.trigger('ui:showMessage', 'proxy');
       })
 
       // Use then instead of done for better promise behavior. But, of course,

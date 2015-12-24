@@ -10,7 +10,7 @@ module.exports = function (Module, App, Backbone) {
   var handleFetchError = function () {
     App.vent.trigger('error', {
       title: 'Error',
-      type: 'unknown'
+      type: 'data'
     });
   };
 

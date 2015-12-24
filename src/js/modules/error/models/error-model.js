@@ -20,7 +20,7 @@ module.exports = function (Module, App, Backbone) {
     setMessage: function () {
 
       var messages = {
-        'unknown':   'An unexpected error occurred. Please try again later.',
+        'data': 'There was a problem downloading Program data. Please try again later.',
         'not-found': 'The resource you requested could not be found. Please try again or <a href="/search">conduct a search</a>.'
       };
 
