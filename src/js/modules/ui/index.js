@@ -8,7 +8,6 @@ module.exports = function (Module, App, Backbone) {
 
   var $ = Backbone.$;
 
-  var $document = $(document);
   var $body = $('body');
   var $top = $('#top');
   var $content = $('#content');
