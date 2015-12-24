@@ -67,7 +67,7 @@ module.exports = function (Module, App, Backbone) {
       if (App.Content.$el.hasClass('collapsed')) {
 
         // Get current scroll position.
-        var offsetHeight = document.body.scrollTop || document.documentElement.scrollTop || 0;
+        var offsetHeight = $('body').scrollTop();
         var headerHeight = 122;
         var targetOffset;
 
@@ -77,12 +77,12 @@ module.exports = function (Module, App, Backbone) {
         targetOffset = e.target.getBoundingClientRect();
 
         // Scroll to the clicked subhead.
-        document.body.scrollTop = document.documentElement.scrollTop = Math.max(targetOffset.top + offsetHeight - headerHeight, 0);
+        window.scrollTo(0, Math.max(targetOffset.top + offsetHeight - headerHeight, 0));
 
       } else {
 
         App.Content.$el.addClass('collapsed');
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        window.scrollTo(0, 0);
 
       }
 

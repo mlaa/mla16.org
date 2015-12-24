@@ -8,12 +8,10 @@ module.exports = function (Module, App, Backbone) {
 
   var $ = Backbone.$;
 
-  // Element cache
-  var $els = {
-    body: $('body'),
-    top: $('#top'),
-    content: $('#content')
-  };
+  var $document = $(document);
+  var $body = $('body');
+  var $top = $('#top');
+  var $content = $('#content');
 
   var messages = {
     'loading': 'Loading',
@@ -27,7 +25,7 @@ module.exports = function (Module, App, Backbone) {
   var setScrollPosition = function () {
     var historyState = App.Links.getHistoryState();
     var position = (historyState.scrollPos) ? historyState.scrollPos : 0;
-    document.body.scrollTop = document.documentElement.scrollTop = position;
+    window.scrollTo(0, position);
   };
 
   var showMessage = function (type) {
@@ -39,11 +37,11 @@ module.exports = function (Module, App, Backbone) {
         })
       })
     );
-    $els.body.addClass('message');
+    $body.addClass('message');
   };
 
   var clearMessage = function () {
-    $els.body.removeClass('message');
+    $body.removeClass('message');
     App.Message.reset();
   };
 
@@ -60,15 +58,15 @@ module.exports = function (Module, App, Backbone) {
     classes += (Backbone.history.fragment === '') ? ' home' : '';
 
     // Scroll to top of the window.
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    window.scrollTo(0, 0);
 
     // Remove all classes from body and content.
-    $els.body.removeClass();
-    $els.content.removeClass();
+    $body.removeClass();
+    $content.removeClass();
     clearMessage();
 
     // Add page classes.
-    $els.body.addClass(classes);
+    $body.addClass(classes);
 
   };
 
@@ -78,9 +76,13 @@ module.exports = function (Module, App, Backbone) {
     document.title = (title) ? $('<div/>').html(title + ' | MLA 2016').text() : 'MLA 2016';
   };
 
-  // Scroll to top when site header is clicked.
-  $els.top.on('click', function () {
-    $els.body.animate({scrollTop: 0}, 'slow');
+  // Scroll to top or navigate home when site header is clicked.
+  $top.on('click', function () {
+    if ($body.scrollTop() === 0) {
+      Backbone.history.navigate('', true);
+    } else {
+      $body.animate({scrollTop: 0}, 'slow');
+    }
   });
 
   // Bind to custom events.

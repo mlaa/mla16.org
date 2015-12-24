@@ -34,9 +34,7 @@ module.exports = function (Module, App, Backbone) {
 
       e.preventDefault();
 
-      var scrollPos = document.body.scrollTop || document.documentElement.scrollTop || 0;
-
-      updateHistoryState({scrollPos: scrollPos});
+      updateHistoryState({scrollPos: $body.scrollTop()});
       Backbone.history.navigate(href.substring(1), true);
       App.Storage.local.setItem('mla16-last-visited', href.substring(1));
 
