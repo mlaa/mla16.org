@@ -36,7 +36,6 @@ module.exports = function (Module, App, Backbone) {
 
       updateHistoryState({scrollPos: $body.scrollTop()});
       Backbone.history.navigate(href.substring(1), true);
-      App.Storage.local.setItem('mla16-last-visited', href.substring(1));
 
       if (typeof ga === 'function') {
         ga('send', 'pageview', href);
