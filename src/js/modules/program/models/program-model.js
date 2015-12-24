@@ -4,6 +4,8 @@
 
 module.exports = function (Module, App, Backbone) {
 
+  var smartquotes = require('smartquotes');
+
   var ProgramModel = Backbone.Model.extend({
     defaults: {
       title: '',
@@ -22,7 +24,7 @@ module.exports = function (Module, App, Backbone) {
 
     formatTitle: function () {
 
-      var title = this.get('title');
+      var title = smartquotes(this.get('title'));
       var sequence = this.get('id');
       var isRegular = /^\d+A?$/.test(sequence);
 

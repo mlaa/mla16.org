@@ -7,6 +7,7 @@ module.exports = function (Module, App, Backbone) {
   var _ = Backbone._;
 
   var linkifyHtml = require('linkifyjs/html');
+  var smartquotes = require('smartquotes');
 
   var Model = Backbone.Model.extend({
 
@@ -28,15 +29,21 @@ module.exports = function (Module, App, Backbone) {
       var hashtags = (isRegular) ? ['s' + sequence, 'mla16'] : ['mla16'];
       var header = (isRegular) ? 'Session ' + sequence : 'Session';
 
-      var linkedText = _.map(this.get('text') || [], linkifyHtml);
+      // Auto-link URLs and e-mail addresses.
+      var formattedText = _.map(this.get('text') || [], linkifyHtml);
+
+      // Convert straight to smart quotes.
+      var formattedTitle = smartquotes(this.get('title'));
+      formattedText = _.map(formattedText, smartquotes);
 
       return {
-        header: header,
         hashtag: hashtags[0],
-        tweetLink: 'https://twitter.com/intent/tweet?text=http://mla16.org/' + sequence +
-          '&hashtags=' + hashtags.join(','),
+        header: header,
         shareLink: 'https://www.facebook.com/sharer.php?s=100&p[url]=http://mla16.org/' + sequence,
-        text: linkedText
+        text: formattedText,
+        title: formattedTitle,
+        tweetLink: 'https://twitter.com/intent/tweet?text=http://mla16.org/' + sequence +
+          '&hashtags=' + hashtags.join(',')
       };
 
     },

@@ -42,6 +42,7 @@
     "jquery": "^2.1.1",
     "jquery.panzoom": "^2.0.5",
     "linkifyjs": "^2.0.0-beta.7",
+    "smartquotes": "^1.0.0",
     "typeahead.js": "^0.11.1",
     "underscore": "^1.7.0"
   },
