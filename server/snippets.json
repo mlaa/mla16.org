@@ -14,7 +14,7 @@
     "manifest=\"/build/app.manifest\""
   ],
   "<!-- INSERT TYPEKIT -->": [
-    "<script src=\"//use.typekit.net/dfy2bmw.js\"></script>",
+    "<script src=\"https://use.typekit.net/dfy2bmw.js\"></script>",
     "<script>try{Typekit.load({async:true});}catch(e){}</script>"
   ]
 }

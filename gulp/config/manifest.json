@@ -4,7 +4,7 @@
   "target": "public/build",
   "options": {
     "cache": [
-      "http://use.typekit.net/dfy2bmw.js"
+      "https://use.typekit.net/dfy2bmw.js"
     ],
     "exclude": [
       "robots.txt",
