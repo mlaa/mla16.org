@@ -3,17 +3,20 @@
   "source": ["public/**"],
   "target": "public/build",
   "options": {
-    "hash": true,
-    "timestamp": false,
-    "fallback": "/ /index.html",
-    "prefix": "/",
-    "network": ["*"],
-    "filename": "app.manifest",
+    "cache": [
+      "http://use.typekit.net/dfy2bmw.js"
+    ],
     "exclude": [
       "robots.txt",
       "build/app.manifest",
       "build/*.map",
       "img/icons/*"
-    ]
+    ],
+    "fallback": "/ /index.html",
+    "filename": "app.manifest",
+    "hash": true,
+    "network": ["*"],
+    "prefix": "/",
+    "timestamp": false
   }
 }
