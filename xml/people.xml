@@ -927,7 +927,7 @@
    </person>
    <person id="184735" sort="A">
       <first>Branka</first>
-      <last>Arsic</last>
+      <last>Arsić</last>
       <sessions>
          <count>1</count>
          <session>216</session>
@@ -1795,14 +1795,6 @@
          <count>2</count>
          <session>780</session>
          <session>818</session>
-      </sessions>
-   </person>
-   <person id="187641" sort="B">
-      <first>Steven</first>
-      <last>Berbeco</last>
-      <sessions>
-         <count>1</count>
-         <session>737</session>
       </sessions>
    </person>
    <person id="114767" sort="B">
@@ -2734,14 +2726,6 @@
       <sessions>
          <count>1</count>
          <session>403</session>
-      </sessions>
-   </person>
-   <person id="20096944" sort="B">
-      <first>Stephen G.</first>
-      <last>Breyer</last>
-      <sessions>
-         <count>1</count>
-         <session>651A</session>
       </sessions>
    </person>
    <person id="169663" sort="B">
@@ -8868,7 +8852,7 @@
    </person>
    <person id="187846" sort="G">
       <first>Dorota</first>
-      <last>Golanska</last>
+      <last>Golańska</last>
       <sessions>
          <count>1</count>
          <session>503</session>
@@ -10683,14 +10667,6 @@
          <session>710</session>
       </sessions>
    </person>
-   <person id="52147" sort="H">
-      <first>María</first>
-      <last>Herrera-Sobek</last>
-      <sessions>
-         <count>1</count>
-         <session>500</session>
-      </sessions>
-   </person>
    <person id="73958" sort="H">
       <first>Alejandro</first>
       <last>Herrero-Olaizola</last>
@@ -11352,6 +11328,14 @@
       <sessions>
          <count>1</count>
          <session>394</session>
+      </sessions>
+   </person>
+   <person id="188729" sort="H">
+      <first>David</first>
+      <last>Huenlich</last>
+      <sessions>
+         <count>1</count>
+         <session>737</session>
       </sessions>
    </person>
    <person id="126361" sort="H">
@@ -26051,8 +26035,8 @@
       </sessions>
    </person>
    <person id="176431" sort="W">
-      <first>Mukoma</first>
-      <last>Wa Ngugi</last>
+      <first>Mũkoma</first>
+      <last>Wa Ngũgĩ</last>
       <sessions>
          <count>1</count>
          <session>64</session>
