@@ -491,7 +491,7 @@
    </session>
    <session id="S310">
       <sequence>28</sequence>
-      <title>Secret Strains, Conflicted Hearts: The Influence of Hasidism on Yiddish Fiction, 1894–1937</title>
+      <title>Secret Strains, Conflicted Hearts: The Influence of Hasidism on Yiddish Fiction, 1894–1937 [canceled]</title>
       <date>7 January</date>
       <day num="1" abbrev="th" ambig="Thurs.">Thursday</day>
       <start-time abbrev="12" minutes="00" ambig="aft" header="12:00 noon">12:00 noon</start-time>
@@ -1406,7 +1406,7 @@
    </session>
    <session id="D087B">
       <sequence>77</sequence>
-      <title>Graphic Interventions: Visual Cultures of the Arab World</title>
+      <title>Graphic Interventions: Visual Cultures of the Arab World [canceled]</title>
       <date>7 January</date>
       <day num="1" abbrev="th" ambig="Thurs.">Thursday</day>
       <start-time abbrev="13" minutes="45" ambig="aft" header="1:45 p.m.">1:45 p.m.</start-time>
@@ -3679,6 +3679,18 @@
          <line>2. "Envisioning the Garden City as Public Space: Metabolic Traces in Singapore as Sustainable City," May Ee Wong, Univ. of California, Davis</line>
          <line>3. "Migrant Publics and Laboring Poetics," Shaoling Ma, Penn State Univ., University Park</line>
          <line>For abstracts, write to joanne.leow@utoronto.ca after 30 Nov.</line>
+      </details>
+   </session>
+   <session id="A024C">
+      <sequence>A024C</sequence>
+      <title>Happy Hour Arranged by the Association for the Study of Literature and the Environment</title>
+      <date>7 January</date>
+      <day num="1" abbrev="th" ambig="Thurs.">Thursday</day>
+      <start-time abbrev="20" minutes="00" ambig="ln" header="8:00 p.m.">8:00 p.m.</start-time>
+      <venue abbrev="off"/>
+      <type abbrev="soc">Social</type>
+      <details>
+         <line role="calendar">8:00 p.m., Container Bar, 90 Rainey St.</line>
       </details>
    </session>
    <session id="C014">
@@ -12168,8 +12180,8 @@ For agenda information, visit www.mla.org/dameeting_agenda after 15 Dec.</line>
          <line role="calendar">5:15–6:30 p.m., Lone Star F-H, JW Marriott</line>
          <line>A linked session arranged in conjunction with the forum Presidential Plenary: Literature and Its Publics: Past, Present, and Future (241). <em>Presiding:</em> Roland Greene, Stanford Univ.</line>
          <line>
-            <em>Speakers:</em> William Adams, National Endowment for the Humanities; Stephen G. Breyer, Supreme Court of the United States; Jo Guldi, Brown Univ.</line>
-         <line>The speakers reflect on the place of historical, legal, and institutional or public interpretation in the general culture.</line>
+            <em>Speakers:</em> William Adams, National Endowment for the Humanities; Jo Guldi, Brown Univ.</line>
+         <line>The speakers reflect on the place of historical and institutional or public interpretation in the general culture.</line>
       </details>
    </session>
    <session id="S012">
@@ -12817,7 +12829,7 @@ For agenda information, visit www.mla.org/dameeting_agenda after 15 Dec.</line>
       <start-time abbrev="17" minutes="15" ambig="aft" header="5:15 p.m.">5:15 p.m.</start-time>
       <end-time abbrev="18" minutes="30" ambig="eve">6:30 p.m.</end-time>
       <venue abbrev="jwm">JW Marriott</venue>
-      <room>202</room>
+      <room>201</room>
       <details>
          <line role="calendar">5:15–6:30 p.m., 202, JW Marriott</line>
          <line>A special session. <em>Presiding:</em> Dana Luciano, Georgetown Univ.</line>
@@ -12904,6 +12916,31 @@ For agenda information, visit www.mla.org/dameeting_agenda after 15 Dec.</line>
          <line>3. "Indigenous Knowledges and Literary Production: Cree Life Narratives," Laura J. Beard, Univ. of Alberta</line>
          <line>4. "Indigenous <em>Testimonio</em> Is Indigenous Intellectual Work," Kelly S. McDonough, Univ. of Texas, Austin</line>
          <line>For abstracts, write to arturo_arias@austin.utexas.edu.</line>
+      </details>
+   </session>
+   <session id="C1035">
+      <sequence>C1035</sequence>
+      <title>Reception Arranged by the Forum GS Life Writing</title>
+      <date>9 January</date>
+      <day num="3" abbrev="sa" ambig="Sat.">Saturday</day>
+      <start-time abbrev="18" minutes="00" ambig="eve" header="6:00 p.m.">6:00 p.m.</start-time>
+      <venue abbrev="off"/>
+      <type abbrev="soc">Social</type>
+      <details>
+         <line role="calendar">6:00 p.m., Chansky/Hipchen suite, Residence Inn Austin Downtown / Convention Center</line>
+      </details>
+   </session>
+   <session id="A075C">
+      <sequence>A075C</sequence>
+      <title>Dinner and Cash Bar arranged by the Milton Society of America</title>
+      <date>9 January</date>
+      <day num="3" abbrev="sa" ambig="Sat.">Saturday</day>
+      <start-time abbrev="18" minutes="30" ambig="eve" header="6:30 p.m.">6:30 p.m.</start-time>
+      <venue abbrev="off"/>
+      <type abbrev="soc">Social</type>
+      <details>
+         <line role="calendar">cash bar at 6:30 p.m. and dinner at 7:30 p.m.,The Driskill, 605 Brazos St.</line>
+         <line>For reservations, write to Angelica Duran at duran0@purdue.edu by 22 Dec.</line>
       </details>
    </session>
    <session id="C031">
@@ -13119,6 +13156,20 @@ For agenda information, visit www.mla.org/dameeting_agenda after 15 Dec.</line>
       <type abbrev="soc">Social</type>
       <details>
          <line role="calendar">7:00–8:15 p.m., 12B, ACC</line>
+      </details>
+   </session>
+   <session id="A066D">
+      <sequence>A066D</sequence>
+      <title>Dinner arranged by the D. H. Lawrence Society of North America</title>
+      <date>9 January</date>
+      <day num="3" abbrev="sa" ambig="Sat.">Saturday</day>
+      <start-time abbrev="19" minutes="30" ambig="eve" header="7:30 p.m.">7:30 p.m.</start-time>
+      <venue abbrev="off"/>
+      <type abbrev="soc">Social</type>
+      <details>
+         <line role="calendar">Dinner at 7:30 p.m., Carmelo's, 504 E. 5th Street</line>
+         <line>Program arranged by the D. H. Lawrence Society of North America</line>
+         <line>For reservations, call Joyce Wexler by Dec 15</line>
       </details>
    </session>
    <session id="A067C">
