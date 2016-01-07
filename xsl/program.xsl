@@ -73,6 +73,22 @@
 
             <!-- Missing sessions -->
 
+            <session id="Q512">
+                <sequence>Q512</sequence>
+                <title><em>MLA Commons</em> Trivia Quiz</title>
+                <date>7 January</date>
+                <day num="1" abbrev="th" ambig="Thurs.">Thursday</day>
+                <start-time abbrev="20" minutes="45" ambig="ln" header="8:45 p.m.">8:45 p.m.</start-time>
+                <end-time abbrev="22" minutes="00" ambig="ln">10:00 p.m.</end-time>
+                <venue abbrev="jwm">JW Marriott</venue>
+                <room>Brazos</room>
+                <type abbrev="soc">Social</type>
+                <details>
+                    <line role="calendar">8:45–10:00 p.m., Brazos, JW Marriott</line>
+                    <line>Join the first ever <em>Commons</em> literary trivia quiz (complete with cash bar and prizes). Space is limited. Stop by PubCentral in ACC for details.</line>
+                </details>
+            </session>
+
         </xsl:variable>
 
         <!-- Sort on session start time -->
