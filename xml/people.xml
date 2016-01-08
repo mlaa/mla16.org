@@ -911,7 +911,7 @@
    </person>
    <person id="184735" sort="A">
       <first>Branka</first>
-      <last>Arsić</last>
+      <last>Arsic</last>
       <sessions>
          <count>1</count>
          <session>216</session>
@@ -8796,7 +8796,7 @@
    </person>
    <person id="187846" sort="G">
       <first>Dorota</first>
-      <last>Golańska</last>
+      <last>Golanska</last>
       <sessions>
          <count>1</count>
          <session>503</session>
@@ -25971,8 +25971,8 @@
       </sessions>
    </person>
    <person id="176431" sort="W">
-      <first>Mũkoma</first>
-      <last>Wa Ngũgĩ</last>
+      <first>Mukoma</first>
+      <last>Wa Ngugi</last>
       <sessions>
          <count>1</count>
          <session>64</session>
