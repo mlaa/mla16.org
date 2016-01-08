@@ -12202,14 +12202,6 @@
          <session>745</session>
       </sessions>
    </person>
-   <person id="72247" sort="J">
-      <first>George L.</first>
-      <last>Justice</last>
-      <sessions>
-         <count>1</count>
-         <session>763</session>
-      </sessions>
-   </person>
    <person id="131550" sort="J">
       <first>Jeremy</first>
       <last>Justus</last>
@@ -13416,14 +13408,6 @@
       <sessions>
          <count>1</count>
          <session>817</session>
-      </sessions>
-   </person>
-   <person id="101600" sort="K">
-      <first>Miriamne Ara</first>
-      <last>Krummel</last>
-      <sessions>
-         <count>1</count>
-         <session>512</session>
       </sessions>
    </person>
    <person id="137670" sort="K">
@@ -26327,6 +26311,14 @@
       <sessions>
          <count>1</count>
          <session>762</session>
+      </sessions>
+   </person>
+   <person id="110843" sort="W">
+      <first>Bonnie</first>
+      <last>Wheeler</last>
+      <sessions>
+         <count>1</count>
+         <session>512</session>
       </sessions>
    </person>
    <person id="83429" sort="W">
