@@ -29,12 +29,12 @@ module.exports = function (Module, App, Backbone) {
       var hashtags = (isRegular) ? ['s' + sequence, 'mla16'] : ['mla16'];
       var header = (isRegular) ? 'Session ' + sequence : 'Session';
 
-      // Auto-link URLs and e-mail addresses.
-      var formattedText = _.map(this.get('text') || [], linkifyHtml);
-
       // Convert straight to smart quotes.
       var formattedTitle = smartquotes(this.get('title'));
-      formattedText = _.map(formattedText, smartquotes);
+      var formattedText = _.map(this.get('text') || [], smartquotes);
+
+      // Auto-link URLs and e-mail addresses.
+      formattedText = _.map(formattedText, linkifyHtml);
 
       return {
         hashtag: hashtags[0],
