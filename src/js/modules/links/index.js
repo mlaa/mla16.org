@@ -12,6 +12,7 @@ module.exports = function (Module, App, Backbone) {
   var $body = $('body');
 
   var hasPushState = Backbone.history.history && Backbone.history.history.pushState;
+  var initialHistoryLength = (Backbone.history.history.length > 2) ? 0 : Backbone.history.history.length;
 
   var updateHistoryState = function (obj, url) {
     if (hasPushState) {
@@ -47,7 +48,13 @@ module.exports = function (Module, App, Backbone) {
 
   // Listen for UI back-button clicks.
   $body.on('click', '.button-back', function () {
-    window.history.back();
+    if (Backbone.history.history.length > initialHistoryLength) {
+      window.history.back();
+    } else {
+      updateHistoryState({scrollPos: $body.scrollTop()});
+      Backbone.history.navigate('', true);
+    }
+
   });
 
   Module.clientSidePages = ['saved'];
