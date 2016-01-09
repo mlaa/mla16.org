@@ -1748,14 +1748,6 @@
          <session>804</session>
       </sessions>
    </person>
-   <person id="76878" sort="B">
-      <first>Réda</first>
-      <last>Bensmaïa</last>
-      <sessions>
-         <count>1</count>
-         <session>712</session>
-      </sessions>
-   </person>
    <person id="135461" sort="B">
       <first>Caetlin</first>
       <last>Benson-Allott</last>
@@ -2416,14 +2408,6 @@
       <sessions>
          <count>1</count>
          <session>159</session>
-      </sessions>
-   </person>
-   <person id="119717" sort="B">
-      <first>Nabil</first>
-      <last>Boudraa</last>
-      <sessions>
-         <count>1</count>
-         <session>712</session>
       </sessions>
    </person>
    <person id="173598" sort="B">
