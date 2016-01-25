@@ -38,7 +38,7 @@ module.exports = function (Module, App, Backbone) {
     };
 
     // Fetch results.
-    return $.getJSON('/program/program_search?output=json&keyword=' + searchTerms)
+    return $.getJSON('/search/mla16?output=json&keyword=' + searchTerms)
 
       .fail(function () {
         App.vent.trigger('ui:showMessage', 'proxy');
