@@ -39,7 +39,7 @@
     "backbone": "^1.1.2",
     "backbone.marionette": "^2.2.2",
     "fastclick": "^1.0.3",
-    "jquery": "^2.1.1",
+    "jquery": "^3.5.0",
     "jquery.panzoom": "^2.0.5",
     "linkifyjs": "^2.0.0-beta.7",
     "smartquotes": "^1.0.0",
